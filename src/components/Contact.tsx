@@ -10,10 +10,10 @@ const Contact = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Get In Touch
+            Contact Our Sales Team
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Ready to book your dream villa? Contact us today for personalized service and exclusive offers
+            Ready to own your dream villa? Contact our expert sales team for private viewings and investment opportunities
           </p>
         </div>
 
@@ -25,7 +25,7 @@ const Contact = () => {
                 <Phone className="text-blue-600" size={20} />
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-1">Phone</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-1">Sales Office</h3>
                 <p className="text-gray-600">+1 (555) 123-4567</p>
                 <p className="text-gray-600">+1 (555) 987-6543</p>
               </div>
@@ -37,8 +37,8 @@ const Contact = () => {
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-1">Email</h3>
-                <p className="text-gray-600">info@aqualuxvillas.com</p>
-                <p className="text-gray-600">bookings@aqualuxvillas.com</p>
+                <p className="text-gray-600">sales@aqualuxdev.com</p>
+                <p className="text-gray-600">invest@aqualuxdev.com</p>
               </div>
             </div>
 
@@ -47,9 +47,9 @@ const Contact = () => {
                 <MapPin className="text-blue-600" size={20} />
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-1">Location</h3>
-                <p className="text-gray-600">Tropical Paradise Islands</p>
-                <p className="text-gray-600">Multiple Exclusive Locations</p>
+                <h3 className="text-lg font-semibold text-gray-900 mb-1">Sales Gallery</h3>
+                <p className="text-gray-600">Luxury Waterfront District</p>
+                <p className="text-gray-600">Premium Development Zone</p>
               </div>
             </div>
 
@@ -58,15 +58,16 @@ const Contact = () => {
                 <Clock className="text-blue-600" size={20} />
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-1">Hours</h3>
-                <p className="text-gray-600">Monday - Sunday</p>
-                <p className="text-gray-600">24/7 Customer Support</p>
+                <h3 className="text-lg font-semibold text-gray-900 mb-1">Viewing Hours</h3>
+                <p className="text-gray-600">Monday - Saturday: 9AM - 6PM</p>
+                <p className="text-gray-600">Sunday: 10AM - 4PM</p>
               </div>
             </div>
           </div>
 
           {/* Contact Form */}
           <div className="bg-gray-50 p-8 rounded-lg">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">Schedule a Private Viewing</h3>
             <form className="space-y-6">
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
@@ -99,16 +100,23 @@ const Contact = () => {
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Interested Property
+                </label>
+                <Input placeholder="Ocean Breeze Villa, Mountain View Retreat, etc." />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
                   Message
                 </label>
                 <Textarea 
-                  placeholder="Tell us about your dream vacation..." 
+                  placeholder="Tell us about your requirements and preferred viewing times..." 
                   rows={4}
                 />
               </div>
 
               <Button className="w-full bg-blue-600 hover:bg-blue-700 text-lg py-3">
-                Send Message
+                Request Private Viewing
               </Button>
             </form>
           </div>

@@ -18,21 +18,21 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
         <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
-          Luxury Pool Villas
+          Luxury Pool Villas for Sale
         </h1>
         <p className="text-xl md:text-2xl mb-8 opacity-90 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-          Escape to paradise with our exclusive collection of stunning waterfront properties
+          Discover your dream home with our exclusive collection of premium waterfront properties
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: '0.4s' }}>
           <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg">
-            Explore Villas
+            View Properties
           </Button>
           <Button 
             size="lg" 
             variant="outline" 
             className="border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 text-lg"
           >
-            Book Now
+            Schedule Viewing
           </Button>
         </div>
       </div>
