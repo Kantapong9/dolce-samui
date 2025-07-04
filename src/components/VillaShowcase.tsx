@@ -8,7 +8,14 @@ const VillaShowcase = () => {
     {
       id: 1,
       name: "Ocean Breeze Villa",
-      image: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?q=80&w=2070",
+      images: [
+        "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?q=80&w=2070",
+        "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=2070",
+        "https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=2070",
+        "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=2070",
+        "https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=2070",
+        "https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=2070"
+      ],
       location: "Oceanfront Paradise",
       bedrooms: 4,
       bathrooms: 3,
@@ -19,7 +26,14 @@ const VillaShowcase = () => {
     {
       id: 2,
       name: "Mountain View Retreat",
-      image: "https://images.unsplash.com/photo-1472396961693-142e6e269027?q=80&w=2070",
+      images: [
+        "https://images.unsplash.com/photo-1472396961693-142e6e269027?q=80&w=2070",
+        "https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=2070",
+        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2070",
+        "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=2070",
+        "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=2070",
+        "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?q=80&w=2070"
+      ],
       location: "Mountain Heights",
       bedrooms: 3,
       bathrooms: 2,
@@ -30,13 +44,74 @@ const VillaShowcase = () => {
     {
       id: 3,
       name: "Tropical Paradise Estate",
-      image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?q=80&w=2070",
+      images: [
+        "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?q=80&w=2070",
+        "https://images.unsplash.com/photo-1520637836862-4d197d17c87a?q=80&w=2070",
+        "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?q=80&w=2070",
+        "https://images.unsplash.com/photo-1615874959474-d609969a20ed?q=80&w=2070",
+        "https://images.unsplash.com/photo-1600298881974-6be191ceeda1?q=80&w=2070",
+        "https://images.unsplash.com/photo-1600298882974-db5268c51e2b?q=80&w=2070"
+      ],
       location: "Tropical Gardens",
       bedrooms: 5,
       bathrooms: 4,
       area: "4,200 sq ft",
       price: "$3.5M",
       description: "Luxurious tropical estate with multiple pools and entertainment areas. Premium finishes throughout."
+    },
+    {
+      id: 4,
+      name: "Cliffside Sanctuary",
+      images: [
+        "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=2070",
+        "https://images.unsplash.com/photo-1600298881754-5da7e8e0b0e2?q=80&w=2070",
+        "https://images.unsplash.com/photo-1600298882638-e27c4f74fbb7?q=80&w=2070",
+        "https://images.unsplash.com/photo-1600298882456-2c5a8e6ae6b5?q=80&w=2070",
+        "https://images.unsplash.com/photo-1600298881587-a46b3e8f2b65?q=80&w=2070",
+        "https://images.unsplash.com/photo-1600298882785-dfb5a8a9ae6b?q=80&w=2070"
+      ],
+      location: "Cliff Heights",
+      bedrooms: 4,
+      bathrooms: 4,
+      area: "3,800 sq ft",
+      price: "$3.2M",
+      description: "Dramatic cliffside villa with breathtaking views and modern architecture. Architect-designed masterpiece."
+    },
+    {
+      id: 5,
+      name: "Beachfront Oasis",
+      images: [
+        "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070",
+        "https://images.unsplash.com/photo-1600298881456-b8c51e3b9e5d?q=80&w=2070",
+        "https://images.unsplash.com/photo-1600298881785-c9b51e3b9e5d?q=80&w=2070",
+        "https://images.unsplash.com/photo-1600298882123-c9b51e3b9e5d?q=80&w=2070",
+        "https://images.unsplash.com/photo-1600298882456-c9b51e3b9e5d?q=80&w=2070",
+        "https://images.unsplash.com/photo-1600298882789-c9b51e3b9e5d?q=80&w=2070"
+      ],
+      location: "Pristine Beach",
+      bedrooms: 6,
+      bathrooms: 5,
+      area: "5,000 sq ft",
+      price: "$4.2M",
+      description: "Ultimate beachfront luxury with private beach access and world-class amenities. Resort-style living."
+    },
+    {
+      id: 6,
+      name: "Sunset Ridge Villa",
+      images: [
+        "https://images.unsplash.com/photo-1518780664697-55e3ad937233?q=80&w=2070",
+        "https://images.unsplash.com/photo-1600298881234-c9b51e3b9e5d?q=80&w=2070",
+        "https://images.unsplash.com/photo-1600298881567-c9b51e3b9e5d?q=80&w=2070",
+        "https://images.unsplash.com/photo-1600298881890-c9b51e3b9e5d?q=80&w=2070",
+        "https://images.unsplash.com/photo-1600298882123-c9b51e3b9e5d?q=80&w=2070",
+        "https://images.unsplash.com/photo-1600298882456-c9b51e3b9e5d?q=80&w=2070"
+      ],
+      location: "Sunset Hills",
+      bedrooms: 3,
+      bathrooms: 3,
+      area: "3,200 sq ft",
+      price: "$2.5M",
+      description: "Spectacular sunset views from every room. Contemporary design with infinity pool and spa facilities."
     }
   ];
 
@@ -55,12 +130,21 @@ const VillaShowcase = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {properties.map((property) => (
             <Card key={property.id} className="overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
-              <div className="relative h-64 overflow-hidden">
-                <img 
-                  src={property.image} 
-                  alt={property.name}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
+              <div className="relative">
+                <div className="grid grid-cols-3 gap-1 h-64">
+                  {property.images.map((image, index) => (
+                    <div 
+                      key={index} 
+                      className={`overflow-hidden ${index === 0 ? 'col-span-2 row-span-2' : ''}`}
+                    >
+                      <img 
+                        src={image} 
+                        alt={`${property.name} - Image ${index + 1}`}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                    </div>
+                  ))}
+                </div>
                 <div className="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full font-semibold">
                   {property.price}
                 </div>
