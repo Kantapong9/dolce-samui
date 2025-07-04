@@ -1,6 +1,7 @@
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { Home, Bed, Bath, MapPin } from 'lucide-react';
 
 const VillaShowcase = () => {
@@ -131,21 +132,24 @@ const VillaShowcase = () => {
           {properties.map((property) => (
             <Card key={property.id} className="overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
               <div className="relative">
-                <div className="grid grid-cols-3 gap-1 h-64">
-                  {property.images.map((image, index) => (
-                    <div 
-                      key={index} 
-                      className={`overflow-hidden ${index === 0 ? 'col-span-2 row-span-2' : ''}`}
-                    >
-                      <img 
-                        src={image} 
-                        alt={`${property.name} - Image ${index + 1}`}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                      />
-                    </div>
-                  ))}
-                </div>
-                <div className="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full font-semibold">
+                <Carousel className="w-full">
+                  <CarouselContent>
+                    {property.images.map((image, index) => (
+                      <CarouselItem key={index}>
+                        <div className="h-64 overflow-hidden">
+                          <img 
+                            src={image} 
+                            alt={`${property.name} - Image ${index + 1}`}
+                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                          />
+                        </div>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <CarouselPrevious className="left-2" />
+                  <CarouselNext className="right-2" />
+                </Carousel>
+                <div className="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full font-semibold z-10">
                   {property.price}
                 </div>
               </div>
