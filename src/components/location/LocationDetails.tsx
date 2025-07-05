@@ -39,7 +39,7 @@ const LocationDetails = () => {
             <span className="text-blue-600">5 min</span>
           </div>
           <div className="flex justify-between">
-            <span>Big Buddha Temple</span>
+            <span>Fisherman Village</span>
             <span className="text-blue-600">10 min</span>
           </div>
           <div className="flex justify-between">
@@ -47,7 +47,7 @@ const LocationDetails = () => {
             <span className="text-blue-600">15 min</span>
           </div>
           <div className="flex justify-between">
-            <span>Fisherman's Village</span>
+            <span>Central Samui</span>
             <span className="text-blue-600">20 min</span>
           </div>
         </CardContent>
