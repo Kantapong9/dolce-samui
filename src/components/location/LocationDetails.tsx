@@ -35,20 +35,20 @@ const LocationDetails = () => {
         </CardHeader>
         <CardContent className="space-y-3">
           <div className="flex justify-between">
-            <span>Chaweng Beach</span>
-            <span className="text-blue-600">5 min</span>
+            <span>Fisherman Village</span>
+            <span className="text-blue-600">3 min</span>
           </div>
           <div className="flex justify-between">
-            <span>Fisherman Village</span>
+            <span>Central Festival Samui</span>
             <span className="text-blue-600">10 min</span>
           </div>
           <div className="flex justify-between">
-            <span>Samui Airport</span>
-            <span className="text-blue-600">15 min</span>
+            <span>Samui International Airport</span>
+            <span className="text-blue-600">12 min</span>
           </div>
           <div className="flex justify-between">
-            <span>Central Samui</span>
-            <span className="text-blue-600">20 min</span>
+            <span>Chaweng Beach</span>
+            <span className="text-blue-600">15 min</span>
           </div>
         </CardContent>
       </Card>
