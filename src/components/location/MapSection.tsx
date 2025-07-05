@@ -7,28 +7,29 @@ interface MapSectionProps {
 }
 
 const MapSection = ({ apiKey }: MapSectionProps) => {
-  useEffect(() => {
-    if (apiKey) {
-      // Load Google Maps script
-      const script = document.createElement('script');
-      script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&libraries=places`;
-      script.async = true;
-      script.defer = true;
-      
-      script.onload = () => {
-        initMap();
-      };
-      
-      document.head.appendChild(script);
+  // Use the provided API key directly
+  const googleMapsApiKey = "AIzaSyAVxGxu6FytyLsJgGe8kebyziF7v6NR71Q";
 
-      return () => {
-        // Only remove if script still exists
-        if (document.head.contains(script)) {
-          document.head.removeChild(script);
-        }
-      };
-    }
-  }, [apiKey]);
+  useEffect(() => {
+    // Load Google Maps script with the hardcoded API key
+    const script = document.createElement('script');
+    script.src = `https://maps.googleapis.com/maps/api/js?key=${googleMapsApiKey}&libraries=places`;
+    script.async = true;
+    script.defer = true;
+    
+    script.onload = () => {
+      initMap();
+    };
+    
+    document.head.appendChild(script);
+
+    return () => {
+      // Only remove if script still exists
+      if (document.head.contains(script)) {
+        document.head.removeChild(script);
+      }
+    };
+  }, []);
 
   const initMap = () => {
     // Updated coordinates as requested
