@@ -39,12 +39,12 @@ const Location = () => {
   }, [apiKey, showApiInput]);
 
   const initMap = () => {
-    // Koh Samui coordinates
-    const kohSamui = { lat: 9.5380, lng: 100.0614 };
+    // Updated coordinates as requested
+    const developmentLocation = { lat: 9.550976, lng: 100.032876 };
     
     const map = new google.maps.Map(document.getElementById('map') as HTMLElement, {
       zoom: 12,
-      center: kohSamui,
+      center: developmentLocation,
       mapTypeId: 'satellite',
       styles: [
         {
@@ -57,7 +57,7 @@ const Location = () => {
 
     // Add marker for the development location
     const marker = new google.maps.Marker({
-      position: kohSamui,
+      position: developmentLocation,
       map: map,
       title: 'AquaLux Developments - Koh Samui',
       draggable: true,
@@ -172,7 +172,7 @@ const Location = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Coordinates</h4>
-                    <p className="text-gray-600">9.5380° N, 100.0614° E</p>
+                    <p className="text-gray-600">9.550976° N, 100.032876° E</p>
                   </div>
                   <Button className="w-full" variant="outline">
                     <NavigationIcon size={16} className="mr-2" />
