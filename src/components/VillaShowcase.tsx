@@ -63,11 +63,11 @@ const VillaShowcase = () => {
       id: 4,
       name: "Cliffside Sanctuary",
       images: [
-        "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=2070",
+        "/lovable-uploads/32d4622d-e051-4126-8cd2-0b4ea9e86e3c.png",
         "https://images.unsplash.com/photo-1600298881754-5da7e8e0b0e2?q=80&w=2070",
         "https://images.unsplash.com/photo-1600298882638-e27c4f74fbb7?q=80&w=2070",
         "https://images.unsplash.com/photo-1600298882456-2c5a8e6ae6b5?q=80&w=2070",
-        "https://images.unsplash.com/photo-1600298881587-a46b3e8f2b65?q=80&w=2070",
+        "https://images.unsplash.com/photo-1600298881587-a46b3e8a9ae6b5?q=80&w=2070",
         "https://images.unsplash.com/photo-1600298882785-dfb5a8a9ae6b?q=80&w=2070"
       ],
       location: "Cliff Heights",
