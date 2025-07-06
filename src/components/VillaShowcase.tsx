@@ -45,7 +45,7 @@ const VillaShowcase = () => {
       id: 3,
       name: "Tropical Paradise Estate",
       images: [
-        "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?q=80&w=2070",
+        "/lovable-uploads/53521dec-6966-4a3e-823e-dc7b60861922.png",
         "https://images.unsplash.com/photo-1520637836862-4d197d17c87a?q=80&w=2070",
         "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?q=80&w=2070",
         "https://images.unsplash.com/photo-1615874959474-d609969a20ed?q=80&w=2070",
