@@ -27,7 +27,7 @@ const VillaShowcase = () => {
       id: 2,
       name: "Mountain View Retreat",
       images: [
-        "https://images.unsplash.com/photo-1472396961693-142e6e269027?q=80&w=2070",
+        "/lovable-uploads/7127a7c9-3145-4a97-9f57-b58b9a5d9957.png",
         "https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=2070",
         "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2070",
         "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=2070",
