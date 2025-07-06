@@ -9,7 +9,7 @@ const VillaShowcase = () => {
       id: 1,
       name: "Ocean Breeze Villa",
       images: [
-        "/lovable-uploads/d5005ce5-72ac-4490-9209-1eb25492d8df.png",
+        "/lovable-uploads/9e5ff405-e0ca-4dd4-b147-779cc0769b74.png",
         "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?q=80&w=2070",
         "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=2070",
         "https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=2070",
