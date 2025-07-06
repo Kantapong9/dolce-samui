@@ -1,4 +1,3 @@
-
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
@@ -10,12 +9,12 @@ const VillaShowcase = () => {
       id: 1,
       name: "Ocean Breeze Villa",
       images: [
+        "/lovable-uploads/d5005ce5-72ac-4490-9209-1eb25492d8df.png",
         "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?q=80&w=2070",
         "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=2070",
         "https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=2070",
         "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=2070",
-        "https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=2070",
-        "https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=2070"
+        "https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=2070"
       ],
       location: "Oceanfront Paradise",
       bedrooms: 4,
