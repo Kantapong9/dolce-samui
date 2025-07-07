@@ -7,7 +7,7 @@ const VillaShowcase = () => {
   const properties = [
     {
       id: 1,
-      name: "Ocean Breeze Villa",
+      name: "Villa Uno",
       images: [
         "/lovable-uploads/9e5ff405-e0ca-4dd4-b147-779cc0769b74.png",
         "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?q=80&w=2070",
@@ -25,7 +25,7 @@ const VillaShowcase = () => {
     },
     {
       id: 2,
-      name: "Mountain View Retreat",
+      name: "Villa Due",
       images: [
         "/lovable-uploads/7127a7c9-3145-4a97-9f57-b58b9a5d9957.png",
         "https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=2070",
@@ -43,7 +43,7 @@ const VillaShowcase = () => {
     },
     {
       id: 3,
-      name: "Tropical Paradise Estate",
+      name: "Villa Tre",
       images: [
         "/lovable-uploads/53521dec-6966-4a3e-823e-dc7b60861922.png",
         "https://images.unsplash.com/photo-1520637836862-4d197d17c87a?q=80&w=2070",
@@ -61,7 +61,7 @@ const VillaShowcase = () => {
     },
     {
       id: 4,
-      name: "Cliffside Sanctuary",
+      name: "Villa Quattro",
       images: [
         "/lovable-uploads/32d4622d-e051-4126-8cd2-0b4ea9e86e3c.png",
         "https://images.unsplash.com/photo-1600298881754-5da7e8e0b0e2?q=80&w=2070",
@@ -79,7 +79,7 @@ const VillaShowcase = () => {
     },
     {
       id: 5,
-      name: "Beachfront Oasis",
+      name: "Villa Cinque",
       images: [
         "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070",
         "https://images.unsplash.com/photo-1600298881456-b8c51e3b9e5d?q=80&w=2070",
@@ -97,7 +97,7 @@ const VillaShowcase = () => {
     },
     {
       id: 6,
-      name: "Sunset Ridge Villa",
+      name: "Villa Sei",
       images: [
         "https://images.unsplash.com/photo-1518780664697-55e3ad937233?q=80&w=2070",
         "https://images.unsplash.com/photo-1600298881234-c9b51e3b9e5d?q=80&w=2070",
