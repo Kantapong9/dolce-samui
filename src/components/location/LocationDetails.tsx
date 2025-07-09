@@ -35,6 +35,10 @@ const LocationDetails = () => {
         </CardHeader>
         <CardContent className="space-y-3">
           <div className="flex justify-between">
+            <span>Convenient Store</span>
+            <span className="text-blue-600">&gt;1 min</span>
+          </div>
+          <div className="flex justify-between">
             <span>Fisherman Village</span>
             <span className="text-blue-600">3 min</span>
           </div>
