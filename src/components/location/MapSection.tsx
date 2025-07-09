@@ -52,7 +52,7 @@ const MapSection = ({ apiKey }: MapSectionProps) => {
     const marker = new window.google.maps.Marker({
       position: developmentLocation,
       map: map,
-      title: 'AquaLux Developments - Koh Samui',
+      title: 'Dolce Villa Samui - Koh Samui',
       draggable: true,
       animation: window.google.maps.Animation.DROP,
     });
@@ -61,7 +61,7 @@ const MapSection = ({ apiKey }: MapSectionProps) => {
     const infoWindow = new window.google.maps.InfoWindow({
       content: `
         <div style="padding: 10px;">
-          <h3 style="margin: 0 0 10px 0; color: #1e40af;">AquaLux Developments</h3>
+          <h3 style="margin: 0 0 10px 0; color: #1e40af;">Dolce Villa Samui</h3>
           <p style="margin: 0; color: #374151;">Premium Pool Villas in Koh Samui</p>
           <p style="margin: 5px 0 0 0; font-size: 12px; color: #6b7280;">Drag the marker to adjust location</p>
         </div>
