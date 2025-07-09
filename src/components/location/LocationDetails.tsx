@@ -64,11 +64,11 @@ const LocationDetails = () => {
         <CardContent className="space-y-3">
           <div className="flex items-center gap-3">
             <Phone size={16} className="text-blue-600" />
-            <span>+66 77 123 456</span>
+            <span>+66 85 564 9899</span>
           </div>
           <div className="flex items-center gap-3">
             <Mail size={16} className="text-blue-600" />
-            <span>info@aqualux.com</span>
+            <span>info@dolcevillasamui.com</span>
           </div>
           <Button className="w-full mt-4">
             Schedule Site Visit
