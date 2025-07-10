@@ -1,37 +1,36 @@
-
-import { Waves, Car, Home, Dumbbell, Wifi, Shield } from 'lucide-react';
+import { Waves, Car, Home, TreePine, Wifi, Camera } from 'lucide-react';
 
 const Amenities = () => {
   const features = [
     {
       icon: Waves,
-      title: "Infinity Pools",
-      description: "Custom-designed infinity pools with stunning views and premium finishes"
+      title: "Salt Water Pool",
+      description: "Refreshing salt water pools with stunning views and premium finishes"
     },
     {
       icon: Car,
-      title: "Private Garages",
-      description: "Secure multi-car garages with smart home integration"
+      title: "In-house Parking",
+      description: "Convenient covered parking spaces within the property"
     },
     {
       icon: Home,
-      title: "Smart Home Tech",
+      title: "Smart Home System",
       description: "Fully integrated smart home systems with premium automation"
     },
     {
-      icon: Dumbbell,
-      title: "Private Gyms",
-      description: "Dedicated fitness spaces with high-end equipment and spa facilities"
+      icon: TreePine,
+      title: "Garden Corner",
+      description: "Beautiful landscaped garden spaces for relaxation and outdoor activities"
     },
     {
       icon: Wifi,
-      title: "Fiber Internet",
-      description: "Ultra-high-speed fiber internet infrastructure throughout"
+      title: "Hi-speed Internet",
+      description: "Ultra-high-speed internet connectivity throughout the property"
     },
     {
-      icon: Shield,
-      title: "Premium Security",
-      description: "Advanced security systems with 24/7 monitoring and concierge services"
+      icon: Camera,
+      title: "Security Camera",
+      description: "Advanced security camera systems with 24/7 monitoring for peace of mind"
     }
   ];
 
