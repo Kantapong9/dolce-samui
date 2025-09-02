@@ -2,28 +2,40 @@
 const Gallery = () => {
   const images = [
     {
-      src: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2070",
-      alt: "Luxury pool villa exterior"
+      src: "/lovable-uploads/447ab717-dc51-4343-8e67-8bed9f7900d6.png",
+      alt: "Modern villa living room with pool view"
     },
     {
-      src: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?q=80&w=2070",
-      alt: "Ocean view from villa"
+      src: "/lovable-uploads/f1283176-9bd8-429c-a8c9-72f08c40ccd0.png",
+      alt: "Elegant dining area with garden views"
     },
     {
-      src: "https://images.unsplash.com/photo-1472396961693-142e6e269027?q=80&w=2070",
-      alt: "Mountain villa landscape"
+      src: "/lovable-uploads/eb0430cb-146b-4879-b4cf-80012203fa8e.png",
+      alt: "Villa exterior with tropical landscaping"
     },
     {
-      src: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?q=80&w=2070",
-      alt: "River and mountain views"
+      src: "/lovable-uploads/eeb34356-22f9-47ec-9387-4ece22d33428.png",
+      alt: "Master bedroom with modern design"
     },
     {
-      src: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?q=80&w=2070",
-      alt: "Relaxation area"
+      src: "/lovable-uploads/cdffae03-4d79-40e7-b0fb-0654e693fe98.png",
+      alt: "Luxury bathroom with freestanding tub"
     },
     {
-      src: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2070",
-      alt: "Villa pool area"
+      src: "/lovable-uploads/4a3070a0-af32-4d07-89b3-4a19c730b03a.png",
+      alt: "Spa bathroom with garden courtyard"
+    },
+    {
+      src: "/lovable-uploads/e25ac1cc-1296-4001-aba4-4b751152caab.png",
+      alt: "Walk-in shower with premium finishes"
+    },
+    {
+      src: "/lovable-uploads/bb126c58-a18d-4da8-b588-f04a3393bea0.png",
+      alt: "Double vanity bathroom design"
+    },
+    {
+      src: "/lovable-uploads/37892cda-a26e-4bd6-8565-4d04a5702f21.png",
+      alt: "Modern kitchen with island and premium appliances"
     }
   ];
 
