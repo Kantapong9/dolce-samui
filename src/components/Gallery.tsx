@@ -1,4 +1,6 @@
 
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+
 const Gallery = () => {
   const images = [
     {
@@ -53,17 +55,27 @@ const Gallery = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {images.map((image, index) => (
-            <div 
-              key={index} 
-              className="relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 group aspect-square"
-            >
-              <img 
-                src={image.src} 
-                alt={image.alt}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </div>
+            <Dialog key={index}>
+              <DialogTrigger asChild>
+                <div 
+                  className="relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 group aspect-square cursor-pointer"
+                >
+                  <img 
+                    src={image.src} 
+                    alt={image.alt}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+              </DialogTrigger>
+              <DialogContent className="max-w-4xl max-h-[90vh] p-0">
+                <img 
+                  src={image.src} 
+                  alt={image.alt}
+                  className="w-full h-full object-contain rounded-lg"
+                />
+              </DialogContent>
+            </Dialog>
           ))}
         </div>
       </div>
