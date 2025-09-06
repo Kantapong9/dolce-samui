@@ -35,8 +35,8 @@ const Navigation = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-navbar/90 backdrop-blur-md border-b border-navbar/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link to="/" className="text-2xl font-bold text-navbar-foreground">
-            Dolce Villa Samui
+          <Link to="/" className="flex items-center">
+            <img src="/lovable-uploads/d4e4a819-5e65-42fe-a278-dd618a63bdcc.png" alt="Dolce Villa Samui" className="h-10 w-auto" />
           </Link>
           
           {/* Desktop Navigation */}
