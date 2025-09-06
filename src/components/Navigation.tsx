@@ -32,10 +32,10 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-navbar/90 backdrop-blur-md border-b border-navbar/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link to="/" className="text-2xl font-bold text-blue-900">
+          <Link to="/" className="text-2xl font-bold text-navbar-foreground">
             Dolce Villa Samui
           </Link>
           
@@ -47,7 +47,7 @@ const Navigation = () => {
                   key={item.name}
                   href={item.href}
                   onClick={() => handleNavClick(item.href)}
-                  className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium"
+                  className="text-navbar-foreground/80 hover:text-navbar-foreground transition-colors duration-200 font-medium"
                 >
                   {item.name}
                 </a>
@@ -55,7 +55,7 @@ const Navigation = () => {
                 <Link
                   key={item.name}
                   to={item.href}
-                  className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium"
+                  className="text-navbar-foreground/80 hover:text-navbar-foreground transition-colors duration-200 font-medium"
                 >
                   {item.name}
                 </Link>
@@ -87,7 +87,7 @@ const Navigation = () => {
             </Button>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-blue-600"
+              className="text-navbar-foreground/80 hover:text-navbar-foreground"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -96,7 +96,7 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden bg-white border-t border-gray-200">
+          <div className="md:hidden bg-navbar border-t border-navbar-foreground/20">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navItems.map((item) => (
                 item.href.startsWith('#') ? (
@@ -104,7 +104,7 @@ const Navigation = () => {
                     key={item.name}
                     href={item.href}
                     onClick={() => handleNavClick(item.href)}
-                    className="block px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors duration-200"
+                    className="block px-3 py-2 text-navbar-foreground/80 hover:text-navbar-foreground transition-colors duration-200"
                   >
                     {item.name}
                   </a>
@@ -113,7 +113,7 @@ const Navigation = () => {
                     key={item.name}
                     to={item.href}
                     onClick={() => setIsOpen(false)}
-                    className="block px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors duration-200"
+                    className="block px-3 py-2 text-navbar-foreground/80 hover:text-navbar-foreground transition-colors duration-200"
                   >
                     {item.name}
                   </Link>
