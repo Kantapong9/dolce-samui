@@ -1,36 +1,39 @@
 import { Waves, Car, Home, TreePine, Wifi, Camera } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Amenities = () => {
+  const { t } = useLanguage();
+  
   const features = [
     {
       icon: Waves,
-      title: "Salt Water Pool",
-      description: "Refreshing salt water pools with stunning views and premium finishes"
+      title: t('amenities.pool.title'),
+      description: t('amenities.pool.desc')
     },
     {
       icon: Car,
-      title: "In-house Parking",
-      description: "Convenient covered parking spaces within the property"
+      title: t('amenities.parking.title'),
+      description: t('amenities.parking.desc')
     },
     {
       icon: Home,
-      title: "Smart Home System",
-      description: "Fully integrated smart home systems with premium automation"
+      title: t('amenities.smart.title'),
+      description: t('amenities.smart.desc')
     },
     {
       icon: TreePine,
-      title: "Garden Corner",
-      description: "Beautiful landscaped garden spaces for relaxation and outdoor activities"
+      title: t('amenities.garden.title'),
+      description: t('amenities.garden.desc')
     },
     {
       icon: Wifi,
-      title: "Hi-speed Internet",
-      description: "Ultra-high-speed internet connectivity throughout the property"
+      title: t('amenities.internet.title'),
+      description: t('amenities.internet.desc')
     },
     {
       icon: Camera,
-      title: "Security Camera",
-      description: "Advanced security camera systems with 24/7 monitoring for peace of mind"
+      title: t('amenities.security.title'),
+      description: t('amenities.security.desc')
     }
   ];
 
@@ -39,10 +42,10 @@ const Amenities = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Premium Features
+            {t('amenities.title')}
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Every villa is crafted with the finest materials and cutting-edge technology for the ultimate luxury living experience
+            {t('amenities.pool.desc')}
           </p>
         </div>
 

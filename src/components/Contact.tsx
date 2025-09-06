@@ -3,17 +3,20 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Contact = () => {
+  const { t } = useLanguage();
+  
   return (
     <section id="contact" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Contact Our Sales Team
+            {t('contact.title')}
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Ready to own your dream villa? Contact our expert sales team for private viewings and investment opportunities
+            {t('contact.subtitle')}
           </p>
         </div>
 
@@ -26,8 +29,7 @@ const Contact = () => {
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-1">Sales Office</h3>
-                <p className="text-gray-600">+1 (555) 123-4567</p>
-                <p className="text-gray-600">+1 (555) 987-6543</p>
+                <p className="text-gray-600">{t('contact.phone')}</p>
               </div>
             </div>
 
@@ -37,8 +39,7 @@ const Contact = () => {
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-1">Email</h3>
-                <p className="text-gray-600">sales@aqualuxdev.com</p>
-                <p className="text-gray-600">invest@aqualuxdev.com</p>
+                <p className="text-gray-600">{t('contact.email.address')}</p>
               </div>
             </div>
 
@@ -48,8 +49,7 @@ const Contact = () => {
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-1">Sales Gallery</h3>
-                <p className="text-gray-600">Luxury Waterfront District</p>
-                <p className="text-gray-600">Premium Development Zone</p>
+                <p className="text-gray-600">{t('contact.address')}</p>
               </div>
             </div>
 
@@ -72,9 +72,9 @@ const Contact = () => {
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    First Name
+                    {t('contact.name')}
                   </label>
-                  <Input placeholder="John" />
+                  <Input placeholder={t('contact.name')} />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -86,9 +86,9 @@ const Contact = () => {
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Email
+                  {t('contact.email')}
                 </label>
-                <Input type="email" placeholder="john@example.com" />
+                <Input type="email" placeholder={t('contact.email')} />
               </div>
 
               <div>
@@ -107,16 +107,16 @@ const Contact = () => {
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Message
+                  {t('contact.message')}
                 </label>
                 <Textarea 
-                  placeholder="Tell us about your requirements and preferred viewing times..." 
+                  placeholder={t('contact.message')} 
                   rows={4}
                 />
               </div>
 
               <Button className="w-full bg-blue-600 hover:bg-blue-700 text-lg py-3">
-                Request Private Viewing
+                {t('contact.send')}
               </Button>
             </form>
           </div>

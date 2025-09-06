@@ -1,7 +1,10 @@
 
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Gallery = () => {
+  const { t } = useLanguage();
+  
   const images = [
     {
       src: "/lovable-uploads/447ab717-dc51-4343-8e67-8bed9f7900d6.png",
@@ -46,10 +49,10 @@ const Gallery = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Gallery
+            {t('gallery.title')}
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Immerse yourself in the beauty and luxury of our pool villas
+            {t('gallery.subtitle')}
           </p>
         </div>
 

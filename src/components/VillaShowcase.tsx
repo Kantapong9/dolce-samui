@@ -2,8 +2,11 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { Home, Bed, Bath, MapPin } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const VillaShowcase = () => {
+  const { t } = useLanguage();
+  
   const properties = [
     {
       id: 1,
@@ -120,10 +123,10 @@ const VillaShowcase = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Featured Properties
+            {t('villa.title')}
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Discover our exclusive collection of luxury pool villas, each designed with meticulous attention to detail and premium finishes
+            {t('villa.bedroom.desc')}
           </p>
         </div>
 

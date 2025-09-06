@@ -1,8 +1,11 @@
 
 import { Button } from '@/components/ui/button';
 import { ArrowDown } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Hero = () => {
+  const { t } = useLanguage();
+  
   return (
     <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
@@ -18,21 +21,21 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
         <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
-          Luxury Pool Villas for Sale
+          {t('hero.title')}
         </h1>
         <p className="text-xl md:text-2xl mb-8 opacity-90 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-          Discover your dream home with our exclusive collection of premium waterfront properties
+          {t('hero.subtitle')}
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: '0.4s' }}>
           <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg">
-            View Properties
+            {t('hero.cta')}
           </Button>
           <Button 
             size="lg" 
             variant="outline" 
             className="border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 text-lg"
           >
-            Schedule Viewing
+            {t('hero.learn')}
           </Button>
         </div>
       </div>
