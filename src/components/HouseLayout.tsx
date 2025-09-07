@@ -1,5 +1,4 @@
 import { useLanguage } from '@/contexts/LanguageContext';
-import housePlan from '@/assets/house-plan.jpg';
 
 const HouseLayout = () => {
   const { t } = useLanguage();
@@ -33,7 +32,7 @@ const HouseLayout = () => {
           <div className="order-2 lg:order-1">
             <div className="relative overflow-hidden rounded-lg shadow-lg">
               <img 
-                src={housePlan} 
+                src="/lovable-uploads/4e4a535b-ea28-4945-9ad3-5f59f1b4a714.png" 
                 alt="Villa House Plan" 
                 className="w-full h-auto object-cover"
               />
