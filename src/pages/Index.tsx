@@ -2,6 +2,7 @@
 import Hero from '@/components/Hero';
 import VillaShowcase from '@/components/VillaShowcase';
 import Amenities from '@/components/Amenities';
+import HouseLayout from '@/components/HouseLayout';
 import Gallery from '@/components/Gallery';
 import Contact from '@/components/Contact';
 import Navigation from '@/components/Navigation';
@@ -13,6 +14,7 @@ const Index = () => {
       <Hero />
       <VillaShowcase />
       <Amenities />
+      <HouseLayout />
       <Gallery />
       <Contact />
     </div>
