@@ -12,7 +12,6 @@ const Navigation = () => {
 
   const navItems = [
     { name: t('nav.home'), href: '/' },
-    { name: t('nav.properties'), href: '#properties' },
     { name: t('nav.features'), href: '#features' },
     { name: t('nav.gallery'), href: '#gallery' },
     { name: t('nav.location'), href: '/location' },
