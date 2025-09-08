@@ -22,7 +22,7 @@ All colors MUST be HSL.
     --primary-foreground: 210 40% 98%;
     
     --navbar: 43 67% 76%;
-    --navbar-foreground: 222.2 84% 4.9%;
+    --navbar-foreground: 0 0% 100%;
 
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
@@ -73,7 +73,7 @@ All colors MUST be HSL.
     --primary-foreground: 222.2 47.4% 11.2%;
     
     --navbar: 43 67% 76%;
-    --navbar-foreground: 222.2 84% 4.9%;
+    --navbar-foreground: 0 0% 100%;
 
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
