@@ -22,7 +22,7 @@ const translations = {
     
     // Hero Section
     'hero.title': 'Luxurious Villa in Koh Samui',
-    'hero.subtitle': 'Experience paradise at our exclusive pool villa with stunning ocean views and world-class amenities',
+    'hero.subtitle': 'Experience paradise at our exclusive pool villa in a quiet area close to the beach near to Samui town center.',
     'hero.cta': 'Book Your Stay',
     'hero.learn': 'Learn More',
     
@@ -76,7 +76,7 @@ const translations = {
     
     // Hero Section
     'hero.title': 'Роскошная Вилла на Ко Самуи',
-    'hero.subtitle': 'Окунитесь в рай в нашей эксклюзивной вилле с бассейном с потрясающим видом на океан и первоклассными удобствами',
+    'hero.subtitle': 'Окунитесь в рай в нашей эксклюзивной вилле с бассейном в тихом районе рядом с пляжем недалеко от центра города Самуи.',
     'hero.cta': 'Забронировать',
     'hero.learn': 'Узнать больше',
     
