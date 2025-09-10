@@ -54,6 +54,20 @@ const translations = {
     'gallery.title': 'Villa Gallery',
     'gallery.subtitle': 'Take a visual tour of our stunning property',
     
+    // House Layout
+    'layout.title': 'House Layout',
+    'layout.subtitle': 'Discover the thoughtfully designed layout of our villa with spacious rooms and modern amenities',
+    'layout.areas': 'Room Areas',
+    'layout.total': 'Total Area',
+    'layout.living': 'Living Room',
+    'layout.kitchen': 'Kitchen',
+    'layout.dining': 'Dining',
+    'layout.bedroom1': 'Bedroom 1',
+    'layout.bedroom2': 'Bedroom 2',
+    'layout.bedroom3': 'Bedroom 3',
+    'layout.bedroom4': 'Bedroom 4',
+    'layout.pool': 'Swimming Pool',
+    
     // Contact
     'contact.title': 'Contact Us',
     'contact.subtitle': 'Ready to book your dream vacation? Get in touch with us today.',
@@ -107,6 +121,20 @@ const translations = {
     // Gallery
     'gallery.title': 'Галерея Виллы',
     'gallery.subtitle': 'Совершите визуальную экскурсию по нашей потрясающей собственности',
+    
+    // House Layout
+    'layout.title': 'Планировка Дома',
+    'layout.subtitle': 'Откройте для себя продуманную планировку нашей виллы с просторными комнатами и современными удобствами',
+    'layout.areas': 'Площади Комнат',
+    'layout.total': 'Общая Площадь',
+    'layout.living': 'Гостиная',
+    'layout.kitchen': 'Кухня',
+    'layout.dining': 'Столовая',
+    'layout.bedroom1': 'Спальня 1',
+    'layout.bedroom2': 'Спальня 2',
+    'layout.bedroom3': 'Спальня 3',
+    'layout.bedroom4': 'Спальня 4',
+    'layout.pool': 'Бассейн',
     
     // Contact
     'contact.title': 'Свяжитесь с Нами',

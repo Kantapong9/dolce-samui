@@ -4,15 +4,15 @@ const HouseLayout = () => {
   const { t } = useLanguage();
 
   const areaData = [
-    { room: 'Total Area', area: '400 m²' },
-    { room: 'Living Room', area: '100 m²' },
-    { room: 'Kitchen', area: '25 m²' },
-    { room: 'Dinning', area: '30 m²' },
-    { room: 'Bedroom 1', area: '60 m²' },
-    { room: 'Bedroom 2', area: '40 m²' },
-    { room: 'Bedroom 3', area: '40 m²' },
-    { room: 'Bedroom 4', area: '30 m²' },
-    { room: 'Swimming Pool', area: '60 m²' },
+    { room: t('layout.total'), area: '400 m²' },
+    { room: t('layout.living'), area: '100 m²' },
+    { room: t('layout.kitchen'), area: '25 m²' },
+    { room: t('layout.dining'), area: '30 m²' },
+    { room: t('layout.bedroom1'), area: '60 m²' },
+    { room: t('layout.bedroom2'), area: '40 m²' },
+    { room: t('layout.bedroom3'), area: '40 m²' },
+    { room: t('layout.bedroom4'), area: '30 m²' },
+    { room: t('layout.pool'), area: '60 m²' },
   ];
 
   return (
@@ -20,10 +20,10 @@ const HouseLayout = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-foreground mb-6">
-            House Layout
+            {t('layout.title')}
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Discover the thoughtfully designed layout of our villa with spacious rooms and modern amenities
+            {t('layout.subtitle')}
           </p>
         </div>
 
@@ -42,7 +42,7 @@ const HouseLayout = () => {
           {/* Area Table */}
           <div className="order-1 lg:order-2">
             <div className="bg-card rounded-lg shadow-lg p-8">
-              <h3 className="text-2xl font-semibold text-foreground mb-6">Room Areas</h3>
+              <h3 className="text-2xl font-semibold text-foreground mb-6">{t('layout.areas')}</h3>
               <div className="space-y-4">
                 {areaData.map((item, index) => (
                   <div 
