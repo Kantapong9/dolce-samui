@@ -61,7 +61,7 @@ const translations = {
     'contact.email': 'Email Address',
     'contact.message': 'Message',
     'contact.send': 'Send Message',
-    'contact.address': 'Koh Samui, Thailand',
+    'contact.address': 'Soi Pratamnak, Bophut, Koh Samui, Thailand',
     'contact.phone': '+66 123 456 789',
     'contact.email.address': 'info@dolcevillasamui.com'
   },
@@ -115,7 +115,7 @@ const translations = {
     'contact.email': 'Электронная Почта',
     'contact.message': 'Сообщение',
     'contact.send': 'Отправить Сообщение',
-    'contact.address': 'Ко Самуи, Таиланд',
+    'contact.address': 'Сой Пратамнак, Бопхут, Ко Самуи, Таиланд',
     'contact.phone': '+66 123 456 789',
     'contact.email.address': 'info@dolcevillasamui.com'
   }
