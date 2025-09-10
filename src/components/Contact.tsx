@@ -100,13 +100,6 @@ const Contact = () => {
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Interested Property
-                </label>
-                <Input placeholder="Ocean Breeze Villa, Mountain View Retreat, etc." />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
                   {t('contact.message')}
                 </label>
                 <Textarea 
