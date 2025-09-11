@@ -24,8 +24,8 @@ const Contact = () => {
           {/* Contact Information */}
           <div className="space-y-8">
             <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
-                <Phone className="text-blue-600" size={20} />
+              <div className="w-12 h-12 bg-navbar rounded-full flex items-center justify-center flex-shrink-0">
+                <Phone className="text-white" size={20} />
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-1">Sales Office</h3>
@@ -34,8 +34,8 @@ const Contact = () => {
             </div>
 
             <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
-                <Mail className="text-blue-600" size={20} />
+              <div className="w-12 h-12 bg-navbar rounded-full flex items-center justify-center flex-shrink-0">
+                <Mail className="text-white" size={20} />
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-1">Email</h3>
@@ -44,8 +44,8 @@ const Contact = () => {
             </div>
 
             <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
-                <MapPin className="text-blue-600" size={20} />
+              <div className="w-12 h-12 bg-navbar rounded-full flex items-center justify-center flex-shrink-0">
+                <MapPin className="text-white" size={20} />
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-1">Sales Gallery</h3>
@@ -54,8 +54,8 @@ const Contact = () => {
             </div>
 
             <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
-                <Clock className="text-blue-600" size={20} />
+              <div className="w-12 h-12 bg-navbar rounded-full flex items-center justify-center flex-shrink-0">
+                <Clock className="text-white" size={20} />
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-1">Viewing Hours</h3>
