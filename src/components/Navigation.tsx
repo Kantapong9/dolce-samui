@@ -31,7 +31,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-navbar/90 backdrop-blur-md border-b border-navbar/20 font-montserrat font-thin">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-navbar/90 backdrop-blur-md border-b border-navbar/20 font-montserrat">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link to="/" className="flex items-center">
@@ -46,7 +46,7 @@ const Navigation = () => {
                   key={item.name}
                   href={item.href}
                   onClick={() => handleNavClick(item.href)}
-                  className="text-navbar-foreground/80 hover:text-navbar-foreground transition-colors duration-200 font-medium"
+                  className="text-navbar-foreground/80 hover:text-navbar-foreground transition-colors duration-200"
                 >
                   {item.name}
                 </a>
@@ -54,7 +54,7 @@ const Navigation = () => {
                 <Link
                   key={item.name}
                   to={item.href}
-                  className="text-navbar-foreground/80 hover:text-navbar-foreground transition-colors duration-200 font-medium"
+                  className="text-navbar-foreground/80 hover:text-navbar-foreground transition-colors duration-200"
                 >
                   {item.name}
                 </Link>
