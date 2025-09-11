@@ -108,7 +108,7 @@ const Contact = () => {
                 />
               </div>
 
-              <Button className="w-full bg-blue-600 hover:bg-blue-700 text-lg py-3">
+              <Button className="w-full bg-navbar hover:bg-navbar/80 text-navbar-foreground text-lg py-3">
                 {t('contact.send')}
               </Button>
             </form>
