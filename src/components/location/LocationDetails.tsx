@@ -2,36 +2,39 @@
 import { MapPin, Navigation as NavigationIcon, Phone, Mail } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const LocationDetails = () => {
+  const { t } = useLanguage();
+  
   return (
     <div className="space-y-6">
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <MapPin className="text-blue-600" size={24} />
-            Development Location
+            {t('location.details.title')}
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
           <div>
-            <h4 className="font-semibold text-gray-900">Address</h4>
+            <h4 className="font-semibold text-gray-900">{t('location.address')}</h4>
             <p className="text-gray-600">Koh Samui, Surat Thani Province, Thailand</p>
           </div>
           <div>
-            <h4 className="font-semibold text-gray-900">Coordinates</h4>
+            <h4 className="font-semibold text-gray-900">{t('location.coordinates')}</h4>
             <p className="text-gray-600">9.550976° N, 100.032876° E</p>
           </div>
           <Button className="w-full" variant="outline">
             <NavigationIcon size={16} className="mr-2" />
-            Get Directions
+            {t('location.directions')}
           </Button>
         </CardContent>
       </Card>
 
       <Card>
         <CardHeader>
-          <CardTitle>Nearby Attractions</CardTitle>
+          <CardTitle>{t('location.nearby.title')}</CardTitle>
         </CardHeader>
         <CardContent className="space-y-3">
           <div className="flex justify-between">
@@ -59,7 +62,7 @@ const LocationDetails = () => {
 
       <Card>
         <CardHeader>
-          <CardTitle>Contact Information</CardTitle>
+          <CardTitle>{t('location.contact.title')}</CardTitle>
         </CardHeader>
         <CardContent className="space-y-3">
           <div className="flex items-center gap-3">
@@ -71,7 +74,7 @@ const LocationDetails = () => {
             <span>info@dolcevillasamui.com</span>
           </div>
           <Button className="w-full mt-4">
-            Schedule Site Visit
+            {t('location.schedule')}
           </Button>
         </CardContent>
       </Card>

@@ -77,7 +77,34 @@ const translations = {
     'contact.send': 'Send Message',
     'contact.address': 'Soi Pratamnak, Bophut, Koh Samui, Thailand',
     'contact.phone': '+66 123 456 789',
-    'contact.email.address': 'info@dolcevillasamui.com'
+    'contact.email.address': 'info@dolcevillasamui.com',
+    
+    // Location Page
+    'location.hero.title': 'Prime Location',
+    'location.hero.subtitle': 'Discover the perfect location of our luxury developments in the heart of Koh Samui',
+    'location.strategic.title': 'Strategic Location in Koh Samui',
+    'location.strategic.subtitle': 'Dolce Villa Samui is strategically positioned close to the town center of Samui Island, offering convenient access to the island\'s most sought-after attractions, dining, and entertainment venues.',
+    'location.town.title': 'Town Center Access',
+    'location.town.desc': 'Just minutes away from Samui\'s vibrant town center with shopping, dining, and local markets',
+    'location.commute.title': 'Quick Commute',
+    'location.commute.desc': 'Easy access to major attractions with most destinations reachable within 15 minutes',
+    'location.transport.title': 'Transport Links',
+    'location.transport.desc': 'Well-connected road network with easy access to all parts of the island',
+    'location.airport.title': 'Airport Proximity',
+    'location.airport.desc': 'Only 12 minutes from Samui International Airport for convenient travel',
+    'location.attractions.title': 'Nearby Attractions & Amenities',
+    'location.beaches.title': 'Beaches & Recreation',
+    'location.shopping.title': 'Shopping & Dining',
+    'location.services.title': 'Services & Facilities',
+    'location.explore.title': 'Explore Our Location',
+    'location.explore.subtitle': 'See exactly where Dolce Villa Samui is located and explore the surrounding area',
+    'location.details.title': 'Development Location',
+    'location.address': 'Address',
+    'location.coordinates': 'Coordinates',
+    'location.directions': 'Get Directions',
+    'location.nearby.title': 'Nearby Attractions',
+    'location.contact.title': 'Contact Information',
+    'location.schedule': 'Schedule Site Visit'
   },
   ru: {
     // Navigation
@@ -145,7 +172,34 @@ const translations = {
     'contact.send': 'Отправить Сообщение',
     'contact.address': 'Сой Пратамнак, Бопхут, Ко Самуи, Таиланд',
     'contact.phone': '+66 123 456 789',
-    'contact.email.address': 'info@dolcevillasamui.com'
+    'contact.email.address': 'info@dolcevillasamui.com',
+    
+    // Location Page
+    'location.hero.title': 'Отличное Расположение',
+    'location.hero.subtitle': 'Откройте для себя идеальное расположение наших роскошных застроек в сердце Ко Самуи',
+    'location.strategic.title': 'Стратегическое Расположение на Ко Самуи',
+    'location.strategic.subtitle': 'Dolce Villa Samui стратегически расположена недалеко от центра города на острове Самуи, предлагая удобный доступ к самым популярным достопримечательностям, ресторанам и развлекательным заведениям острова.',
+    'location.town.title': 'Доступ к Центру Города',
+    'location.town.desc': 'Всего в нескольких минутах от оживленного центра города Самуи с магазинами, ресторанами и местными рынками',
+    'location.commute.title': 'Быстрая Поездка',
+    'location.commute.desc': 'Легкий доступ к основным достопримечательностям, большинство мест можно добраться за 15 минут',
+    'location.transport.title': 'Транспортные Связи',
+    'location.transport.desc': 'Хорошо связанная дорожная сеть с легким доступом ко всем частям острова',
+    'location.airport.title': 'Близость к Аэропорту',
+    'location.airport.desc': 'Всего 12 минут от международного аэропорта Самуи для удобных путешествий',
+    'location.attractions.title': 'Близлежащие Достопримечательности и Удобства',
+    'location.beaches.title': 'Пляжи и Отдых',
+    'location.shopping.title': 'Покупки и Рестораны',
+    'location.services.title': 'Услуги и Объекты',
+    'location.explore.title': 'Исследуйте Наше Расположение',
+    'location.explore.subtitle': 'Посмотрите точно, где находится Dolce Villa Samui, и исследуйте окрестности',
+    'location.details.title': 'Расположение Комплекса',
+    'location.address': 'Адрес',
+    'location.coordinates': 'Координаты',
+    'location.directions': 'Получить Направления',
+    'location.nearby.title': 'Близлежащие Достопримечательности',
+    'location.contact.title': 'Контактная Информация',
+    'location.schedule': 'Запланировать Визит'
   }
 };
 

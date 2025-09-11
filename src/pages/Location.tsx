@@ -3,8 +3,11 @@ import Navigation from '@/components/Navigation';
 import MapSection from '@/components/location/MapSection';
 import LocationDetails from '@/components/location/LocationDetails';
 import { MapPin, Clock, Car, Plane } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Location = () => {
+  const { t } = useLanguage();
+  
   return (
     <div className="min-h-screen bg-gray-50">
       <Navigation />
@@ -13,10 +16,10 @@ const Location = () => {
       <section className="pt-20 pb-12 bg-gradient-to-br from-blue-900 to-blue-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Prime Location
+            {t('location.hero.title')}
           </h1>
           <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-            Discover the perfect location of our luxury developments in the heart of Koh Samui
+            {t('location.hero.subtitle')}
           </p>
         </div>
       </section>
@@ -26,11 +29,10 @@ const Location = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Strategic Location in Koh Samui
+              {t('location.strategic.title')}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Dolce Villa Samui is strategically positioned close to the town center of Samui Island, 
-              offering convenient access to the island's most sought-after attractions, dining, and entertainment venues.
+              {t('location.strategic.subtitle')}
             </p>
           </div>
 
@@ -39,9 +41,9 @@ const Location = () => {
               <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <MapPin className="text-blue-600" size={24} />
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Town Center Access</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('location.town.title')}</h3>
               <p className="text-gray-600">
-                Just minutes away from Samui's vibrant town center with shopping, dining, and local markets
+                {t('location.town.desc')}
               </p>
             </div>
 
@@ -49,9 +51,9 @@ const Location = () => {
               <div className="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <Clock className="text-green-600" size={24} />
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Quick Commute</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('location.commute.title')}</h3>
               <p className="text-gray-600">
-                Easy access to major attractions with most destinations reachable within 15 minutes
+                {t('location.commute.desc')}
               </p>
             </div>
 
@@ -59,9 +61,9 @@ const Location = () => {
               <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <Car className="text-purple-600" size={24} />
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Transport Links</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('location.transport.title')}</h3>
               <p className="text-gray-600">
-                Well-connected road network with easy access to all parts of the island
+                {t('location.transport.desc')}
               </p>
             </div>
 
@@ -69,20 +71,20 @@ const Location = () => {
               <div className="bg-orange-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <Plane className="text-orange-600" size={24} />
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Airport Proximity</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('location.airport.title')}</h3>
               <p className="text-gray-600">
-                Only 12 minutes from Samui International Airport for convenient travel
+                {t('location.airport.desc')}
               </p>
             </div>
           </div>
 
           <div className="bg-gray-50 rounded-lg p-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-              Nearby Attractions & Amenities
+              {t('location.attractions.title')}
             </h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className="bg-white rounded-lg p-6 shadow-sm">
-                <h4 className="font-semibold text-gray-900 mb-2">Beaches & Recreation</h4>
+                <h4 className="font-semibold text-gray-900 mb-2">{t('location.beaches.title')}</h4>
                 <ul className="text-gray-600 space-y-1">
                   <li>• Chaweng Beach - 15 minutes</li>
                   <li>• Lamai Beach - 20 minutes</li>
@@ -92,7 +94,7 @@ const Location = () => {
               </div>
 
               <div className="bg-white rounded-lg p-6 shadow-sm">
-                <h4 className="font-semibold text-gray-900 mb-2">Shopping & Dining</h4>
+                <h4 className="font-semibold text-gray-900 mb-2">{t('location.shopping.title')}</h4>
                 <ul className="text-gray-600 space-y-1">
                   <li>• Central Festival Samui - 10 minutes</li>
                   <li>• Walking Street Market - 5 minutes</li>
@@ -102,7 +104,7 @@ const Location = () => {
               </div>
 
               <div className="bg-white rounded-lg p-6 shadow-sm">
-                <h4 className="font-semibold text-gray-900 mb-2">Services & Facilities</h4>
+                <h4 className="font-semibold text-gray-900 mb-2">{t('location.services.title')}</h4>
                 <ul className="text-gray-600 space-y-1">
                   <li>• Bangkok Hospital Samui - 12 minutes</li>
                   <li>• International Schools - 8-15 minutes</li>
@@ -120,10 +122,10 @@ const Location = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Explore Our Location
+              {t('location.explore.title')}
             </h2>
             <p className="text-lg text-gray-600">
-              See exactly where Dolce Villa Samui is located and explore the surrounding area
+              {t('location.explore.subtitle')}
             </p>
           </div>
           
