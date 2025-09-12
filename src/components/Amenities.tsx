@@ -55,8 +55,8 @@ const Amenities = () => {
               key={index} 
               className="text-center p-6 rounded-lg hover:shadow-lg transition-shadow duration-300 group"
             >
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-600 transition-colors duration-300">
-                <feature.icon className="text-blue-600 group-hover:text-white transition-colors duration-300" size={32} />
+              <div className="w-16 h-16 bg-navbar rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-navbar/80 transition-colors duration-300">
+                <feature.icon className="text-white transition-colors duration-300" size={32} />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
               <p className="text-gray-600">{feature.description}</p>
