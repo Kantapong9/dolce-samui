@@ -12,7 +12,7 @@ const Location = () => {
       <section id="location" className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">
               {t('location.strategic.title')}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -63,7 +63,7 @@ const Location = () => {
           </div>
 
           <div className="bg-gray-50 rounded-lg p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+            <h3 className="text-2xl font-light text-gray-900 mb-6 text-center">
               {t('location.attractions.title')}
             </h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -105,7 +105,7 @@ const Location = () => {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">
               {t('location.explore.title')}
             </h2>
             <p className="text-lg text-gray-600">
