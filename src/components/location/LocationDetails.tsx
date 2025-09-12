@@ -11,7 +11,7 @@ const LocationDetails = () => {
     <div className="space-y-6">
       <Card>
         <CardHeader>
-          <CardTitle className="flex items-center gap-2">
+          <CardTitle className="flex items-center gap-2 font-light">
             <MapPin className="text-blue-600" size={24} />
             {t('location.details.title')}
           </CardTitle>
@@ -34,7 +34,7 @@ const LocationDetails = () => {
 
       <Card>
         <CardHeader>
-          <CardTitle>{t('location.nearby.title')}</CardTitle>
+          <CardTitle className="font-light">{t('location.nearby.title')}</CardTitle>
         </CardHeader>
         <CardContent className="space-y-3">
           <div className="flex justify-between">
@@ -62,7 +62,7 @@ const LocationDetails = () => {
 
       <Card>
         <CardHeader>
-          <CardTitle>{t('location.contact.title')}</CardTitle>
+          <CardTitle className="font-light">{t('location.contact.title')}</CardTitle>
         </CardHeader>
         <CardContent className="space-y-3">
           <div className="flex items-center gap-3">

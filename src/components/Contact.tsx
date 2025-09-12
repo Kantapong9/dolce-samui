@@ -67,7 +67,7 @@ const Contact = () => {
 
           {/* Contact Form */}
           <div className="bg-gray-50 p-8 rounded-lg">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Schedule a Private Viewing</h3>
+            <h3 className="text-2xl font-light text-gray-900 mb-6">Schedule a Private Viewing</h3>
             <form className="space-y-6">
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
