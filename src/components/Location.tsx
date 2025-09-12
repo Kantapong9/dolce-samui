@@ -8,20 +8,8 @@ const Location = () => {
   
   return (
     <>
-      {/* Hero Section */}
-      <section id="location" className="py-20 bg-gradient-to-br from-blue-900 to-blue-700">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            {t('location.hero.title')}
-          </h1>
-          <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-            {t('location.hero.subtitle')}
-          </p>
-        </div>
-      </section>
-
       {/* Location Information Section */}
-      <section className="py-16 bg-white">
+      <section id="location" className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
