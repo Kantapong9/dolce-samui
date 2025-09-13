@@ -70,30 +70,30 @@ const Location = () => {
               <div className="bg-white rounded-lg p-6 shadow-sm">
                 <h4 className="font-semibold text-gray-900 mb-2">{t('location.beaches.title')}</h4>
                 <ul className="text-gray-600 space-y-1">
-                  <li>• Chaweng Beach - 15 minutes</li>
-                  <li>• Lamai Beach - 20 minutes</li>
                   <li>• Fisherman's Village - 3 minutes</li>
                   <li>• Big Buddha Temple - 8 minutes</li>
+                  <li>• Chaweng Beach - 15 minutes</li>
+                  <li>• Lamai Beach - 20 minutes</li>
                 </ul>
               </div>
 
               <div className="bg-white rounded-lg p-6 shadow-sm">
                 <h4 className="font-semibold text-gray-900 mb-2">{t('location.shopping.title')}</h4>
                 <ul className="text-gray-600 space-y-1">
-                  <li>• Central Festival Samui - 10 minutes</li>
-                  <li>• Walking Street Market - 5 minutes</li>
                   <li>• Local Restaurants - 2-5 minutes</li>
+                  <li>• Walking Street Market - 5 minutes</li>
                   <li>• Night Bazaar - 7 minutes</li>
+                  <li>• Central Festival Samui - 10 minutes</li>
                 </ul>
               </div>
 
               <div className="bg-white rounded-lg p-6 shadow-sm">
                 <h4 className="font-semibold text-gray-900 mb-2">{t('location.services.title')}</h4>
                 <ul className="text-gray-600 space-y-1">
-                  <li>• Bangkok Hospital Samui - 12 minutes</li>
+                  <li>• Marina & Yacht Club - 5 minutes</li>
                   <li>• International Schools - 8-15 minutes</li>
                   <li>• Golf Courses - 10-20 minutes</li>
-                  <li>• Marina & Yacht Club - 5 minutes</li>
+                  <li>• Bangkok Hospital Samui - 12 minutes</li>
                 </ul>
               </div>
             </div>
