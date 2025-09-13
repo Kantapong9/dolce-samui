@@ -19,7 +19,7 @@ const LocationDetails = () => {
         <CardContent className="space-y-4">
           <div>
             <h4 className="font-semibold text-gray-900">{t('location.address')}</h4>
-            <p className="text-gray-600">Koh Samui, Surat Thani Province, Thailand</p>
+            <p className="text-gray-600">Soi Pratamnak, Bophut, Koh Samui, Surat Thani Province, Thailand</p>
           </div>
           <div>
             <h4 className="font-semibold text-gray-900">{t('location.coordinates')}</h4>
