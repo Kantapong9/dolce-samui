@@ -45,7 +45,7 @@ const Amenities = () => {
             {t('amenities.title')}
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            {t('amenities.pool.desc')}
+            {t('amenities.subtitle')}
           </p>
         </div>
 

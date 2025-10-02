@@ -37,6 +37,7 @@ const translations = {
     
     // Amenities
     'amenities.title': 'Premium Features',
+    'amenities.subtitle': 'Indulge in world-class amenities crafted for the discerning few',
     'amenities.pool.title': 'Salt Water Pool',
     'amenities.pool.desc': 'Refreshing salt water pool with stunning views',
     'amenities.parking.title': 'In-house Parking',
@@ -136,6 +137,7 @@ const translations = {
     
     // Amenities
     'amenities.title': 'Премиум Удобства',
+    'amenities.subtitle': 'Насладитесь удобствами мирового класса, созданными для самых взыскательных',
     'amenities.pool.title': 'Бассейн с Соленой Водой',
     'amenities.pool.desc': 'Освежающий бассейн с соленой водой и потрясающими видами',
     'amenities.parking.title': 'Внутренняя Парковка',
