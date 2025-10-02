@@ -54,6 +54,10 @@ const translations = {
     'gallery.title': 'Villa Gallery',
     'gallery.subtitle': 'Take a visual tour of our stunning property',
     
+    // Project Plan Layout
+    'projectPlan.title': 'Project Plan Layout',
+    'projectPlan.subtitle': 'Explore the comprehensive development plan showcasing all villa units and their strategic positioning',
+    
     // House Layout
     'layout.title': 'House Layout',
     'layout.subtitle': 'Discover the thoughtfully designed layout of our villa with spacious rooms and modern amenities',
@@ -148,6 +152,10 @@ const translations = {
     // Gallery
     'gallery.title': 'Галерея Виллы',
     'gallery.subtitle': 'Совершите визуальную экскурсию по нашей потрясающей собственности',
+    
+    // Project Plan Layout
+    'projectPlan.title': 'План Проекта',
+    'projectPlan.subtitle': 'Изучите всеобъемлющий план развития, демонстрирующий все виллы и их стратегическое расположение',
     
     // House Layout
     'layout.title': 'Планировка Дома',

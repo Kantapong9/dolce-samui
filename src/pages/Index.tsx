@@ -1,6 +1,7 @@
 
 import Hero from '@/components/Hero';
 import Amenities from '@/components/Amenities';
+import ProjectPlanLayout from '@/components/ProjectPlanLayout';
 import HouseLayout from '@/components/HouseLayout';
 import Gallery from '@/components/Gallery';
 import Location from '@/components/Location';
@@ -13,6 +14,7 @@ const Index = () => {
       <Navigation />
       <Hero />
       <Amenities />
+      <ProjectPlanLayout />
       <HouseLayout />
       <Gallery />
       <Location />
