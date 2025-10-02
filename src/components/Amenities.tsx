@@ -1,4 +1,4 @@
-import { Waves, Car, Home, TreePine, Wifi, Camera } from 'lucide-react';
+import { Waves, Car, TreePine, Wifi } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const Amenities = () => {
@@ -16,11 +16,6 @@ const Amenities = () => {
       description: t('amenities.parking.desc')
     },
     {
-      icon: Home,
-      title: t('amenities.smart.title'),
-      description: t('amenities.smart.desc')
-    },
-    {
       icon: TreePine,
       title: t('amenities.garden.title'),
       description: t('amenities.garden.desc')
@@ -29,11 +24,6 @@ const Amenities = () => {
       icon: Wifi,
       title: t('amenities.internet.title'),
       description: t('amenities.internet.desc')
-    },
-    {
-      icon: Camera,
-      title: t('amenities.security.title'),
-      description: t('amenities.security.desc')
     }
   ];
 
