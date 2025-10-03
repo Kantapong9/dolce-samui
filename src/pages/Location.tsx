@@ -38,8 +38,8 @@ const Location = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             <div className="text-center">
-              <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <MapPin className="text-blue-600" size={24} />
+              <div className="bg-navbar rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <MapPin className="text-white" size={24} />
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('location.town.title')}</h3>
               <p className="text-gray-600">
@@ -48,8 +48,8 @@ const Location = () => {
             </div>
 
             <div className="text-center">
-              <div className="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <Clock className="text-green-600" size={24} />
+              <div className="bg-navbar rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <Clock className="text-white" size={24} />
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('location.commute.title')}</h3>
               <p className="text-gray-600">
@@ -58,8 +58,8 @@ const Location = () => {
             </div>
 
             <div className="text-center">
-              <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <Car className="text-purple-600" size={24} />
+              <div className="bg-navbar rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <Car className="text-white" size={24} />
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('location.transport.title')}</h3>
               <p className="text-gray-600">
@@ -68,8 +68,8 @@ const Location = () => {
             </div>
 
             <div className="text-center">
-              <div className="bg-orange-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <Plane className="text-orange-600" size={24} />
+              <div className="bg-navbar rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <Plane className="text-white" size={24} />
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('location.airport.title')}</h3>
               <p className="text-gray-600">

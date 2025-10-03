@@ -87,7 +87,7 @@ const translations = {
     // Location Page
     'location.hero.title': 'Prime Location',
     'location.hero.subtitle': 'Discover the perfect location of our luxury developments in the heart of Koh Samui',
-    'location.strategic.title': 'Strategic Location in Koh Samui',
+    'location.strategic.title': 'Strategic Location',
     'location.strategic.subtitle': 'Dolce Villa Samui is strategically positioned close to the town center of Samui Island, offering convenient access to the island\'s most sought-after attractions, dining, and entertainment venues.',
     'location.town.title': 'Town Center Access',
     'location.town.desc': 'Just minutes away from Samui\'s vibrant town center with shopping, dining, and local markets',
@@ -187,7 +187,7 @@ const translations = {
     // Location Page
     'location.hero.title': 'Отличное Расположение',
     'location.hero.subtitle': 'Откройте для себя идеальное расположение наших роскошных застроек в сердце Ко Самуи',
-    'location.strategic.title': 'Стратегическое Расположение на Ко Самуи',
+    'location.strategic.title': 'Стратегическое Расположение',
     'location.strategic.subtitle': 'Dolce Villa Samui стратегически расположена недалеко от центра города на острове Самуи, предлагая удобный доступ к самым популярным достопримечательностям, ресторанам и развлекательным заведениям острова.',
     'location.town.title': 'Доступ к Центру Города',
     'location.town.desc': 'Всего в нескольких минутах от оживленного центра города Самуи с магазинами, ресторанами и местными рынками',
