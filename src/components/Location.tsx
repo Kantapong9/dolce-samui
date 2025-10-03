@@ -96,6 +96,16 @@ const Location = () => {
                   <li>• Bangkok Hospital Samui - 12 minutes</li>
                 </ul>
               </div>
+
+              <div className="bg-white rounded-lg p-6 shadow-sm">
+                <h4 className="font-semibold text-gray-900 mb-2">{t('location.conveniences.title')}</h4>
+                <ul className="text-gray-600 space-y-1">
+                  <li>• Convenience Store - 1 minutes</li>
+                  <li>• Laundry - 1 minutes</li>
+                  <li>• Gas Station - 2 minutes</li>
+                  <li>• Cafe/Coffee - 2 minutes</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
