@@ -34,34 +34,6 @@ const LocationDetails = () => {
 
       <Card>
         <CardHeader>
-          <CardTitle className="font-light">{t('location.nearby.title')}</CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-3">
-          <div className="flex justify-between">
-            <span>Convenient Store</span>
-            <span className="text-blue-600">&gt;1 min</span>
-          </div>
-          <div className="flex justify-between">
-            <span>Fisherman Village</span>
-            <span className="text-blue-600">3 min</span>
-          </div>
-          <div className="flex justify-between">
-            <span>Central Festival Samui</span>
-            <span className="text-blue-600">10 min</span>
-          </div>
-          <div className="flex justify-between">
-            <span>Samui International Airport</span>
-            <span className="text-blue-600">12 min</span>
-          </div>
-          <div className="flex justify-between">
-            <span>Chaweng Beach</span>
-            <span className="text-blue-600">15 min</span>
-          </div>
-        </CardContent>
-      </Card>
-
-      <Card>
-        <CardHeader>
           <CardTitle className="font-light">{t('location.contact.title')}</CardTitle>
         </CardHeader>
         <CardContent className="space-y-3">
