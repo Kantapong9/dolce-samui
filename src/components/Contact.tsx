@@ -78,9 +78,9 @@ const Contact = () => {
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Last Name
+                    {t('contact.lastname')}
                   </label>
-                  <Input placeholder="Last Name" />
+                  <Input placeholder={t('contact.lastname')} />
                 </div>
               </div>
 
