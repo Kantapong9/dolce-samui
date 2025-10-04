@@ -75,7 +75,7 @@ const translations = {
     
     // Contact
     'contact.title': 'Contact Us',
-    'contact.subtitle': 'Ready to book your dream vacation? Get in touch with us today.',
+    'contact.subtitle': 'Ready to book your dream vacation home? Get in touch with us today.',
     'contact.name': 'Full Name',
     'contact.email': 'Email Address',
     'contact.message': 'Message',
@@ -176,7 +176,7 @@ const translations = {
     
     // Contact
     'contact.title': 'Свяжитесь с Нами',
-    'contact.subtitle': 'Готовы забронировать отпуск мечты? Свяжитесь с нами сегодня.',
+    'contact.subtitle': 'Готовы забронировать дом мечты для отпуска? Свяжитесь с нами сегодня.',
     'contact.name': 'Полное Имя',
     'contact.email': 'Электронная Почта',
     'contact.message': 'Сообщение',
