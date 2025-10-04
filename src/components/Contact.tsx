@@ -80,7 +80,7 @@ const Contact = () => {
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     Last Name
                   </label>
-                  <Input placeholder="Doe" />
+                  <Input placeholder="Last Name" />
                 </div>
               </div>
 
