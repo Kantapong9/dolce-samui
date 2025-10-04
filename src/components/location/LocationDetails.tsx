@@ -45,9 +45,6 @@ const LocationDetails = () => {
             <Mail size={16} className="text-blue-600" />
             <span>info@dolcevillasamui.com</span>
           </div>
-          <Button className="w-full mt-4">
-            {t('location.schedule')}
-          </Button>
         </CardContent>
       </Card>
     </div>
