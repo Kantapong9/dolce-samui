@@ -81,7 +81,7 @@ const translations = {
     'contact.message': 'Message',
     'contact.send': 'Send Message',
     'contact.address': 'Soi Pratamnak, Bophut, Koh Samui, Thailand',
-    'contact.phone': '+66 123 456 789',
+    'contact.phone': '+66 85 564 9899',
     'contact.email.address': 'info@dolcevillasamui.com',
     
     // Location Page
@@ -182,7 +182,7 @@ const translations = {
     'contact.message': 'Сообщение',
     'contact.send': 'Отправить Сообщение',
     'contact.address': 'Сой Пратамнак, Бопхут, Ко Самуи, Таиланд',
-    'contact.phone': '+66 123 456 789',
+    'contact.phone': '+66 85 564 9899',
     'contact.email.address': 'info@dolcevillasamui.com',
     
     // Location Page
