@@ -84,6 +84,15 @@ const translations = {
     'contact.address': 'Soi Pratamnak, Bophut, Koh Samui, Thailand',
     'contact.phone': '+66 85 564 9899',
     'contact.email.address': 'info@dolcevillasamui.com',
+    'contact.salesoffice': 'Sales Office',
+    'contact.email.label': 'Email',
+    'contact.salesgallery': 'Sales Gallery',
+    'contact.viewinghours': 'Viewing Hours',
+    'contact.hours.weekday': 'Monday - Saturday: 9AM - 6PM',
+    'contact.hours.sunday': 'Sunday: 10AM - 4PM',
+    'contact.schedule': 'Schedule a Private Viewing',
+    'contact.phone.label': 'Phone',
+    'contact.phone.placeholder': '+1 (555) 123-4567',
     
     // Location Page
     'location.hero.title': 'Prime Location',
@@ -186,6 +195,15 @@ const translations = {
     'contact.address': 'Сой Пратамнак, Бопхут, Ко Самуи, Таиланд',
     'contact.phone': '+66 85 564 9899',
     'contact.email.address': 'info@dolcevillasamui.com',
+    'contact.salesoffice': 'Офис Продаж',
+    'contact.email.label': 'Электронная Почта',
+    'contact.salesgallery': 'Галерея Продаж',
+    'contact.viewinghours': 'Часы Просмотра',
+    'contact.hours.weekday': 'Понедельник - Суббота: 9:00 - 18:00',
+    'contact.hours.sunday': 'Воскресенье: 10:00 - 16:00',
+    'contact.schedule': 'Запланировать Частный Просмотр',
+    'contact.phone.label': 'Телефон',
+    'contact.phone.placeholder': '+1 (555) 123-4567',
     
     // Location Page
     'location.hero.title': 'Отличное Расположение',

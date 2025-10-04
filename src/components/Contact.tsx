@@ -28,7 +28,7 @@ const Contact = () => {
                 <Phone className="text-white" size={20} />
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-1">Sales Office</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-1">{t('contact.salesoffice')}</h3>
                 <p className="text-gray-600">{t('contact.phone')}</p>
               </div>
             </div>
@@ -38,7 +38,7 @@ const Contact = () => {
                 <Mail className="text-white" size={20} />
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-1">Email</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-1">{t('contact.email.label')}</h3>
                 <p className="text-gray-600">{t('contact.email.address')}</p>
               </div>
             </div>
@@ -48,7 +48,7 @@ const Contact = () => {
                 <MapPin className="text-white" size={20} />
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-1">Sales Gallery</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-1">{t('contact.salesgallery')}</h3>
                 <p className="text-gray-600">{t('contact.address')}</p>
               </div>
             </div>
@@ -58,16 +58,16 @@ const Contact = () => {
                 <Clock className="text-white" size={20} />
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-1">Viewing Hours</h3>
-                <p className="text-gray-600">Monday - Saturday: 9AM - 6PM</p>
-                <p className="text-gray-600">Sunday: 10AM - 4PM</p>
+                <h3 className="text-lg font-semibold text-gray-900 mb-1">{t('contact.viewinghours')}</h3>
+                <p className="text-gray-600">{t('contact.hours.weekday')}</p>
+                <p className="text-gray-600">{t('contact.hours.sunday')}</p>
               </div>
             </div>
           </div>
 
           {/* Contact Form */}
           <div className="bg-gray-50 p-8 rounded-lg">
-            <h3 className="text-2xl font-light text-gray-900 mb-6">Schedule a Private Viewing</h3>
+            <h3 className="text-2xl font-light text-gray-900 mb-6">{t('contact.schedule')}</h3>
             <form className="space-y-6">
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
@@ -93,9 +93,9 @@ const Contact = () => {
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Phone
+                  {t('contact.phone.label')}
                 </label>
-                <Input type="tel" placeholder="+1 (555) 123-4567" />
+                <Input type="tel" placeholder={t('contact.phone.placeholder')} />
               </div>
 
               <div>
