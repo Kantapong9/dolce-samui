@@ -66,7 +66,7 @@ const Location = () => {
             <h3 className="text-2xl font-light text-gray-900 mb-6 text-center">
               {t('location.attractions.title')}
             </h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="bg-white rounded-lg p-6 shadow-sm">
                 <h4 className="font-semibold text-gray-900 mb-2">{t('location.beaches.title')}</h4>
                 <ul className="text-gray-600 space-y-1">
