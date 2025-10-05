@@ -28,7 +28,7 @@ const PaymentTerms = () => {
         <div className="bg-white rounded-lg shadow-lg overflow-hidden">
           <div className="overflow-x-auto">
             <table className="w-full">
-              <thead className="bg-primary text-white">
+              <thead className="bg-navbar text-navbar-foreground">
                 <tr>
                   <th className="px-6 py-4 text-left font-semibold">{t('payment.stage')}</th>
                   <th className="px-6 py-4 text-left font-semibold">{t('payment.milestone.label')}</th>
