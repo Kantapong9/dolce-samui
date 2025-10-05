@@ -35,6 +35,10 @@ const translations = {
     'villa.kitchen.title': 'Gourmet Kitchen',
     'villa.kitchen.desc': 'Fully equipped modern kitchen with premium appliances and island seating',
     
+    // Project Concept
+    'concept.title': 'Project Concept',
+    'concept.description': 'Dolce Villa Samui represents a harmonious blend of contemporary luxury and tropical island living. Nestled in the serene landscape of Koh Samui, our exclusive development features thoughtfully designed pool villas that embody modern elegance while embracing the natural beauty of Thailand\'s paradise island. Each villa is crafted with meticulous attention to detail, offering spacious living areas, premium finishes, and private outdoor spaces that create the perfect sanctuary for those seeking a refined lifestyle in one of Asia\'s most coveted destinations.',
+    
     // Amenities
     'amenities.title': 'Premium Features',
     'amenities.subtitle': 'Indulge in world-class amenities crafted for the discerning few',
@@ -166,6 +170,10 @@ const translations = {
     'villa.living.desc': 'Открытое жилое пространство, идеальное для отдыха и развлечений',
     'villa.kitchen.title': 'Кухня Гурмана',
     'villa.kitchen.desc': 'Полностью оборудованная современная кухня с премиальной техникой и барной стойкой',
+    
+    // Project Concept
+    'concept.title': 'Концепция Проекта',
+    'concept.description': 'Dolce Villa Samui представляет собой гармоничное сочетание современной роскоши и тропической островной жизни. Расположенный в живописном ландшафте Ко Самуи, наш эксклюзивный комплекс включает продуманно спроектированные виллы с бассейнами, которые воплощают современную элегантность и одновременно сохраняют естественную красоту райского острова Таиланда. Каждая вилла создана с тщательным вниманием к деталям, предлагая просторные жилые зоны, премиальную отделку и частные открытые пространства, которые создают идеальное убежище для тех, кто ищет изысканный образ жизни в одном из самых желанных мест Азии.',
     
     // Amenities
     'amenities.title': 'Премиум Удобства',
