@@ -1,9 +1,15 @@
 
 import { useState } from 'react';
-import { Menu, X, Globe } from 'lucide-react';
+import { Menu, X, Globe, ChevronDown } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,8 +18,14 @@ const Navigation = () => {
 
   const navItems = [
     { name: t('nav.home'), href: '/' },
-    { name: t('nav.features'), href: '#features' },
-    { name: t('nav.gallery'), href: '#gallery' },
+    { 
+      name: t('nav.features'), 
+      href: '#features',
+      subItems: [
+        { name: t('nav.features'), href: '#features' },
+        { name: t('nav.gallery'), href: '#gallery' },
+      ]
+    },
     { name: t('nav.location'), href: '#location' },
     { name: t('nav.contact'), href: '#contact' },
   ];
@@ -41,7 +53,27 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              item.href.startsWith('#') ? (
+              item.subItems ? (
+                <DropdownMenu key={item.name}>
+                  <DropdownMenuTrigger className="flex items-center gap-1 text-navbar-foreground/80 hover:text-navbar-foreground transition-colors duration-200">
+                    {item.name}
+                    <ChevronDown size={16} />
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent className="bg-navbar/95 backdrop-blur-md border border-navbar-foreground/20 shadow-lg z-50">
+                    {item.subItems.map((subItem) => (
+                      <DropdownMenuItem key={subItem.name} asChild>
+                        <a
+                          href={subItem.href}
+                          onClick={() => handleNavClick(subItem.href)}
+                          className="text-navbar-foreground/80 hover:text-navbar-foreground cursor-pointer"
+                        >
+                          {subItem.name}
+                        </a>
+                      </DropdownMenuItem>
+                    ))}
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              ) : item.href.startsWith('#') ? (
                 <a
                   key={item.name}
                   href={item.href}
@@ -98,7 +130,23 @@ const Navigation = () => {
           <div className="md:hidden bg-navbar border-t border-navbar-foreground/20">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navItems.map((item) => (
-                item.href.startsWith('#') ? (
+                item.subItems ? (
+                  <div key={item.name} className="space-y-1">
+                    <div className="px-3 py-2 text-navbar-foreground font-medium">
+                      {item.name}
+                    </div>
+                    {item.subItems.map((subItem) => (
+                      <a
+                        key={subItem.name}
+                        href={subItem.href}
+                        onClick={() => handleNavClick(subItem.href)}
+                        className="block px-6 py-2 text-navbar-foreground/80 hover:text-navbar-foreground transition-colors duration-200"
+                      >
+                        {subItem.name}
+                      </a>
+                    ))}
+                  </div>
+                ) : item.href.startsWith('#') ? (
                   <a
                     key={item.name}
                     href={item.href}
