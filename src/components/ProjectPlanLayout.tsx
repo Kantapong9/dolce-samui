@@ -1,5 +1,5 @@
 import { useLanguage } from '@/contexts/LanguageContext';
-import projectPlanImage from '@/assets/project-plan.jpeg';
+import projectPlanImage from '@/assets/project-plan-new.jpg';
 
 const ProjectPlanLayout = () => {
   const { t } = useLanguage();
