@@ -67,18 +67,18 @@ const HouseLayout = () => {
 
           {/* Area Table */}
           <div className="order-1 lg:order-2">
-            <div className="bg-card rounded-lg shadow-lg p-8">
-              <h3 className="text-2xl font-semibold text-foreground mb-6">{t('layout.areas')}</h3>
-              <div className="space-y-4">
+            <div className="bg-card rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold text-foreground mb-4">{t('layout.areas')}</h3>
+              <div className="space-y-2">
                 {areaData.map((item, index) => (
                   <div 
                     key={index}
-                    className={`flex justify-between items-center py-3 px-4 rounded-lg ${
+                    className={`flex justify-between items-center py-2 px-3 rounded-lg ${
                       index === 0 ? 'bg-primary/10 font-semibold' : 'bg-muted/50'
                     }`}
                   >
-                    <span className="text-foreground">{item.room}</span>
-                    <span className="text-foreground font-medium">{item.area}</span>
+                    <span className="text-foreground text-sm">{item.room}</span>
+                    <span className="text-foreground font-medium text-sm">{item.area}</span>
                   </div>
                 ))}
               </div>
