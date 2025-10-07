@@ -1,7 +1,23 @@
 import { useLanguage } from '@/contexts/LanguageContext';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
+import house1 from '@/assets/house-1.jpg';
+import house2 from '@/assets/house-2.jpg';
+import house3 from '@/assets/house-3.jpg';
+import house4 from '@/assets/house-4.jpg';
+import house5 from '@/assets/house-5.jpg';
+import house6 from '@/assets/house-6.jpg';
 
 const HouseLayout = () => {
   const { t } = useLanguage();
+
+  const houseImages = [
+    { src: house1, alt: 'House Layout 1' },
+    { src: house2, alt: 'House Layout 2' },
+    { src: house3, alt: 'House Layout 3' },
+    { src: house4, alt: 'House Layout 4' },
+    { src: house5, alt: 'House Layout 5' },
+    { src: house6, alt: 'House Layout 6' },
+  ];
 
   const areaData = [
     { room: t('layout.total'), area: '400 m²' },
@@ -28,15 +44,25 @@ const HouseLayout = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-          {/* House Plan Image */}
+          {/* House Plan Images Carousel */}
           <div className="order-2 lg:order-1">
-            <div className="relative overflow-hidden rounded-lg shadow-lg">
-              <img 
-                src="/lovable-uploads/4e4a535b-ea28-4945-9ad3-5f59f1b4a714.png" 
-                alt="Villa House Plan" 
-                className="w-full h-auto object-cover"
-              />
-            </div>
+            <Carousel className="w-full">
+              <CarouselContent>
+                {houseImages.map((house, index) => (
+                  <CarouselItem key={index}>
+                    <div className="relative overflow-hidden rounded-lg shadow-lg">
+                      <img 
+                        src={house.src} 
+                        alt={house.alt} 
+                        className="w-full h-auto object-cover"
+                      />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="left-4" />
+              <CarouselNext className="right-4" />
+            </Carousel>
           </div>
 
           {/* Area Table */}
