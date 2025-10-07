@@ -43,9 +43,9 @@ const HouseLayout = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-8 gap-12 items-center max-w-6xl mx-auto">
           {/* House Plan Images Carousel */}
-          <div className="order-2 lg:order-1">
+          <div className="order-2 lg:order-1 lg:col-span-5">
             <Carousel className="w-full">
               <CarouselContent>
                 {houseImages.map((house, index) => (
@@ -66,7 +66,7 @@ const HouseLayout = () => {
           </div>
 
           {/* Area Table */}
-          <div className="order-1 lg:order-2">
+          <div className="order-1 lg:order-2 lg:col-span-3">
             <div className="bg-card rounded-lg shadow-lg p-6">
               <h3 className="text-xl font-semibold text-foreground mb-4">{t('layout.areas')}</h3>
               <div className="space-y-2">
