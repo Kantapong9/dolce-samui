@@ -24,9 +24,9 @@ const HouseLayout = () => {
 
   const houseInfo = [
     {
-      title: 'Ground Floor Plan',
+      title: 'House of Dawn (400 sq.m. usable area)',
       description: 'Main living areas including spacious living room, modern kitchen, and dining area with direct pool access.',
-      features: ['Open plan living', 'Pool access', 'Guest bathroom', 'Storage room']
+      features: ['3 bedrooms plus', '3 bathrooms + 1 guest toilet', 'Modern kitchen', 'Salt water pool (8m x 3m)', 'Laundry room', '2 parking']
     },
     {
       title: 'First Floor Plan',
