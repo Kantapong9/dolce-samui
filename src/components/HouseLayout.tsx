@@ -1,5 +1,6 @@
+import { useState, useEffect } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, CarouselApi } from '@/components/ui/carousel';
 import house1 from '@/assets/house-1.jpg';
 import house2 from '@/assets/house-2.jpg';
 import house3 from '@/assets/house-3.jpg';
@@ -9,6 +10,8 @@ import house6 from '@/assets/house-6.jpg';
 
 const HouseLayout = () => {
   const { t } = useLanguage();
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
 
   const houseImages = [
     { src: house1, alt: 'House Layout 1' },
@@ -19,17 +22,48 @@ const HouseLayout = () => {
     { src: house6, alt: 'House Layout 6' },
   ];
 
-  const areaData = [
-    { room: t('layout.total'), area: '400 m²' },
-    { room: t('layout.living'), area: '100 m²' },
-    { room: t('layout.kitchen'), area: '25 m²' },
-    { room: t('layout.dining'), area: '30 m²' },
-    { room: t('layout.bedroom1'), area: '60 m²' },
-    { room: t('layout.bedroom2'), area: '40 m²' },
-    { room: t('layout.bedroom3'), area: '40 m²' },
-    { room: t('layout.bedroom4'), area: '30 m²' },
-    { room: t('layout.pool'), area: '60 m²' },
+  const houseInfo = [
+    {
+      title: 'Ground Floor Plan',
+      description: 'Main living areas including spacious living room, modern kitchen, and dining area with direct pool access.',
+      features: ['Open plan living', 'Pool access', 'Guest bathroom', 'Storage room']
+    },
+    {
+      title: 'First Floor Plan',
+      description: 'Private quarters featuring master bedroom suite and three additional bedrooms with en-suite bathrooms.',
+      features: ['Master bedroom 60m²', '3 Additional bedrooms', 'En-suite bathrooms', 'Balconies']
+    },
+    {
+      title: 'Front Elevation',
+      description: 'Modern architectural design with clean lines and contemporary finishes.',
+      features: ['Contemporary style', 'Large windows', 'Covered parking', 'Landscaped entrance']
+    },
+    {
+      title: 'Rear Elevation',
+      description: 'Stunning pool area with outdoor entertainment spaces and garden views.',
+      features: ['Private pool 60m²', 'Outdoor terrace', 'Garden area', 'Pool deck']
+    },
+    {
+      title: 'Side Elevation',
+      description: 'Side view showcasing the multi-level design and architectural details.',
+      features: ['Two-story design', 'Balcony access', 'Privacy walls', 'Side entrance']
+    },
+    {
+      title: '3D Perspective',
+      description: 'Complete view of the villa showcasing the modern design and spatial layout.',
+      features: ['Total area 400m²', '4 Bedrooms', '5 Bathrooms', 'Private pool']
+    }
   ];
+
+  useEffect(() => {
+    if (!api) return;
+
+    setCurrent(api.selectedScrollSnap());
+
+    api.on('select', () => {
+      setCurrent(api.selectedScrollSnap());
+    });
+  }, [api]);
 
   return (
     <section className="py-20 bg-background">
@@ -46,7 +80,7 @@ const HouseLayout = () => {
         <div className="grid grid-cols-1 lg:grid-cols-8 gap-12 items-center max-w-6xl mx-auto">
           {/* House Plan Images Carousel */}
           <div className="order-2 lg:order-1 lg:col-span-5">
-            <Carousel className="w-full">
+            <Carousel className="w-full" setApi={setApi}>
               <CarouselContent>
                 {houseImages.map((house, index) => (
                   <CarouselItem key={index}>
@@ -65,22 +99,27 @@ const HouseLayout = () => {
             </Carousel>
           </div>
 
-          {/* Area Table */}
+          {/* House Information */}
           <div className="order-1 lg:order-2 lg:col-span-3">
             <div className="bg-card rounded-lg shadow-lg p-6">
-              <h3 className="text-xl font-semibold text-foreground mb-4">{t('layout.areas')}</h3>
-              <div className="space-y-2">
-                {areaData.map((item, index) => (
-                  <div 
-                    key={index}
-                    className={`flex justify-between items-center py-2 px-3 rounded-lg ${
-                      index === 0 ? 'bg-primary/10 font-semibold' : 'bg-muted/50'
-                    }`}
-                  >
-                    <span className="text-foreground text-sm">{item.room}</span>
-                    <span className="text-foreground font-medium text-sm">{item.area}</span>
-                  </div>
-                ))}
+              <h3 className="text-2xl font-light text-foreground mb-3">
+                {houseInfo[current].title}
+              </h3>
+              <p className="text-muted-foreground mb-6 leading-relaxed">
+                {houseInfo[current].description}
+              </p>
+              <div className="space-y-3">
+                <h4 className="text-sm font-semibold text-foreground uppercase tracking-wide">
+                  Key Features
+                </h4>
+                <ul className="space-y-2">
+                  {houseInfo[current].features.map((feature, index) => (
+                    <li key={index} className="flex items-start">
+                      <span className="text-primary mr-2">•</span>
+                      <span className="text-foreground text-sm">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>
