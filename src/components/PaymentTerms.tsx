@@ -17,7 +17,7 @@ const PaymentTerms = () => {
     <section className="py-20 px-4 bg-gradient-to-b from-white to-gray-50">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">
             {t('payment.title')}
           </h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
