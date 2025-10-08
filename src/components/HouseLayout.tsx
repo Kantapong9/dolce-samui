@@ -24,32 +24,38 @@ const HouseLayout = () => {
 
   const houseInfo = [
     {
-      title: 'House of Dawn (400 sq.m. usable area)',
+      title: 'House of Dawn',
+      area: '(400 sq.m. usable area)',
       description: 'Main living areas including spacious living room, modern kitchen, and dining area with direct pool access.',
       features: ['3 bedrooms plus', '3 bathrooms + 1 guest toilet', 'Modern kitchen', 'Salt water pool (8m x 3m)', 'Laundry room', '2 parking']
     },
     {
       title: 'First Floor Plan',
+      area: '',
       description: 'Private quarters featuring master bedroom suite and three additional bedrooms with en-suite bathrooms.',
       features: ['Master bedroom 60m²', '3 Additional bedrooms', 'En-suite bathrooms', 'Balconies']
     },
     {
       title: 'Front Elevation',
+      area: '',
       description: 'Modern architectural design with clean lines and contemporary finishes.',
       features: ['Contemporary style', 'Large windows', 'Covered parking', 'Landscaped entrance']
     },
     {
       title: 'Rear Elevation',
+      area: '',
       description: 'Stunning pool area with outdoor entertainment spaces and garden views.',
       features: ['Private pool 60m²', 'Outdoor terrace', 'Garden area', 'Pool deck']
     },
     {
       title: 'Side Elevation',
+      area: '',
       description: 'Side view showcasing the multi-level design and architectural details.',
       features: ['Two-story design', 'Balcony access', 'Privacy walls', 'Side entrance']
     },
     {
       title: '3D Perspective',
+      area: '',
       description: 'Complete view of the villa showcasing the modern design and spatial layout.',
       features: ['Total area 400m²', '4 Bedrooms', '5 Bathrooms', 'Private pool']
     }
@@ -102,9 +108,14 @@ const HouseLayout = () => {
           {/* House Information */}
           <div className="order-1 lg:order-2 lg:col-span-3">
             <div className="bg-card rounded-lg shadow-lg p-6">
-              <h3 className="text-2xl font-light text-foreground mb-3">
+              <h3 className="text-2xl font-light text-foreground mb-1">
                 {houseInfo[current].title}
               </h3>
+              {houseInfo[current].area && (
+                <p className="text-lg text-muted-foreground mb-3">
+                  {houseInfo[current].area}
+                </p>
+              )}
               <p className="text-muted-foreground mb-6 leading-relaxed">
                 {houseInfo[current].description}
               </p>
