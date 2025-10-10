@@ -83,7 +83,7 @@ const HouseLayout = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-8 gap-12 items-center max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-8 gap-12 items-stretch max-w-6xl mx-auto">
           {/* House Plan Images Carousel */}
           <div className="order-2 lg:order-1 lg:col-span-5">
             <Carousel className="w-full" setApi={setApi}>
@@ -106,8 +106,8 @@ const HouseLayout = () => {
           </div>
 
           {/* House Information */}
-          <div className="order-1 lg:order-2 lg:col-span-3">
-            <div className="bg-card rounded-lg shadow-lg p-6">
+          <div className="order-1 lg:order-2 lg:col-span-3 flex">
+            <div className="bg-card rounded-lg shadow-lg p-6 flex flex-col w-full">
               <h3 className="text-2xl font-light text-foreground mb-1">
                 {houseInfo[current].title}
               </h3>
