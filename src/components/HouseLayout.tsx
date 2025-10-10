@@ -90,11 +90,11 @@ const HouseLayout = () => {
               <CarouselContent>
                 {houseImages.map((house, index) => (
                   <CarouselItem key={index}>
-                    <div className="relative overflow-hidden rounded-lg shadow-lg h-full flex items-center">
+                    <div className="relative overflow-hidden rounded-lg h-full flex items-center">
                       <img 
                         src={house.src} 
                         alt={house.alt} 
-                        className="w-full h-full object-contain"
+                        className="w-full h-full object-contain rounded-lg shadow-lg"
                       />
                     </div>
                   </CarouselItem>
