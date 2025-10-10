@@ -85,16 +85,16 @@ const HouseLayout = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-8 gap-12 items-stretch max-w-6xl mx-auto">
           {/* House Plan Images Carousel */}
-          <div className="order-2 lg:order-1 lg:col-span-5">
-            <Carousel className="w-full" setApi={setApi}>
+          <div className="order-2 lg:order-1 lg:col-span-5 flex">
+            <Carousel className="w-full h-full" setApi={setApi}>
               <CarouselContent>
                 {houseImages.map((house, index) => (
                   <CarouselItem key={index}>
-                    <div className="relative overflow-hidden rounded-lg shadow-lg">
+                    <div className="relative overflow-hidden rounded-lg shadow-lg h-full flex items-center">
                       <img 
                         src={house.src} 
                         alt={house.alt} 
-                        className="w-full h-auto object-cover"
+                        className="w-full h-full object-contain"
                       />
                     </div>
                   </CarouselItem>
