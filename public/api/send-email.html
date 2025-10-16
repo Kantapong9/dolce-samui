@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email API</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <script>
+        // Simple email sending using Web API
+        async function sendEmail(formData) {
+            try {
+                // ใช้ Web Share API หรือ EmailJS หรือ service อื่น
+                // สำหรับตัวอย่างนี้เราจะใช้ mailto fallback
+                
+                const subject = encodeURIComponent('Private Viewing Request - Dolce Villa Samui');
+                const body = encodeURIComponent(`
+Dear Dolce Villa Samui Team,
+
+I would like to schedule a private viewing of your villa property.
+
+Contact Information:
+- Name: ${formData.firstName} ${formData.lastName}
+- Email: ${formData.email}
+- Phone: ${formData.phone || 'Not provided'}
+
+Message:
+${formData.message || 'No additional message provided'}
+
+Please contact me to arrange a convenient time for the viewing.
+
+Best regards,
+${formData.firstName} ${formData.lastName}
+                `);
+                
+                // สร้าง mailto link
+                const mailtoLink = `mailto:info@dolcevillasamui.com?subject=${subject}&body=${body}`;
+                
+                // เปิด email client
+                window.location.href = mailtoLink;
+                
+                return { success: true, message: 'Email client opened' };
+                
+            } catch (error) {
+                console.error('Email sending failed:', error);
+                throw error;
+            }
+        }
+        
+        // Export function for use in React
+        window.sendEmail = sendEmail;
+    </script>
+</body>
+</html>
