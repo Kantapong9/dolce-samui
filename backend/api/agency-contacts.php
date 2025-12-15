@@ -65,7 +65,7 @@ if (!$conn) {
     http_response_code(500);
     echo json_encode([
         'success' => false,
-        'message' => 'เกิดข้อผิดพลาดในการเชื่อมต่อฐานข้อมูล'
+        'message' => 'An error occurred in the database connection.'
     ]);
     exit();
 }
@@ -94,7 +94,7 @@ if ($method === 'GET' && $contactId !== null) {
         http_response_code(404);
         echo json_encode([
             'success' => false,
-            'message' => 'ไม่พบข้อมูล'
+            'message' => 'No information found'
         ]);
     } else {
         $row = $result->fetch_assoc();
@@ -166,7 +166,7 @@ if ($method === 'POST') {
         http_response_code(400);
         echo json_encode([
             'success' => false,
-            'message' => 'กรุณากรอกชื่อ นามสกุล และชื่อ Agency'
+            'message' => 'Please fill in your first name, last name, and agency name.'
         ]);
         exit();
     }
@@ -177,6 +177,24 @@ if ($method === 'POST') {
     $agencyName = $conn->real_escape_string($agencyName);
     $details = $conn->real_escape_string($details);
     
+    // Check for existing contact with the same first and last name (case-insensitive)
+    $checkStmt = $conn->prepare("SELECT id FROM agency_contacts WHERE LOWER(first_name) = LOWER(?) AND LOWER(last_name) = LOWER(?) LIMIT 1");
+    $checkStmt->bind_param("ss", $firstName, $lastName);
+    $checkStmt->execute();
+    $checkResult = $checkStmt->get_result();
+    
+    if ($checkResult && $checkResult->num_rows > 0) {
+        http_response_code(409);
+        echo json_encode([
+            'success' => false,
+            'message' => 'This name is already in the system.'
+        ]);
+        $checkStmt->close();
+        exit();
+    }
+    
+    $checkStmt->close();
+    
     // Insert into database
     $stmt = $conn->prepare("INSERT INTO agency_contacts (first_name, last_name, agency_name, details) VALUES (?, ?, ?, ?)");
     $stmt->bind_param("ssss", $firstName, $lastName, $agencyName, $details);
@@ -186,7 +204,7 @@ if ($method === 'POST') {
         
         echo json_encode([
             'success' => true,
-            'message' => 'บันทึกข้อมูลสำเร็จ',
+            'message' => 'Successfully',
             'data' => [
                 'id' => $insertId,
                 'firstName' => $data['firstName'],
@@ -199,7 +217,7 @@ if ($method === 'POST') {
         http_response_code(500);
         echo json_encode([
             'success' => false,
-            'message' => 'เกิดข้อผิดพลาดในการบันทึกข้อมูล',
+            'message' => 'An error occurred while saving the data.',
             'error' => $conn->error
         ]);
     }
