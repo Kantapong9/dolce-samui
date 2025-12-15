@@ -129,4 +129,10 @@ All colors MUST be HSL.
       transform: translateY(0);
     }
   }
+
+  /* Custom py-12 with different top and bottom padding */
+  .py-12 {
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+  }
 }

@@ -97,7 +97,16 @@ if ($method === 'GET' && $contactId !== null) {
             'message' => 'ไม่พบข้อมูล'
         ]);
     } else {
-        $contact = $result->fetch_assoc();
+        $row = $result->fetch_assoc();
+        // Convert snake_case to camelCase for frontend
+        $contact = [
+            'id' => $row['id'],
+            'firstName' => $row['first_name'],
+            'lastName' => $row['last_name'],
+            'agencyName' => $row['agency_name'],
+            'details' => $row['details'],
+            'createdAt' => $row['created_at']
+        ];
         echo json_encode([
             'success' => true,
             'data' => $contact
@@ -114,7 +123,15 @@ if ($method === 'GET') {
     
     $contacts = [];
     while ($row = $result->fetch_assoc()) {
-        $contacts[] = $row;
+        // Convert snake_case to camelCase for frontend
+        $contacts[] = [
+            'id' => $row['id'],
+            'firstName' => $row['first_name'],
+            'lastName' => $row['last_name'],
+            'agencyName' => $row['agency_name'],
+            'details' => $row['details'],
+            'createdAt' => $row['created_at']
+        ];
     }
     
     echo json_encode([
