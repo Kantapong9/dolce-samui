@@ -1,5 +1,20 @@
-node_modules/
+# Environment variables
 .env
-database.sqlite
-*.log
+.env.local
+.env.*.local
 
+# PHP
+*.log
+*.cache
+vendor/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db

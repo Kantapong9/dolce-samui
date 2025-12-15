@@ -35,7 +35,7 @@ const AgencyForm = () => {
     
     // Validation
     if (!formData.firstName || !formData.lastName || !formData.agencyName) {
-      setError('กรุณากรอกข้อมูลให้ครบถ้วน (ชื่อ, นามสกุล, และชื่อ Agency)');
+      setError('Please fill in all the required information (first name, last name, and agency name).');
       return;
     }
     
@@ -53,8 +53,8 @@ const AgencyForm = () => {
       if (result.success) {
         setIsSubmitted(true);
         toast({
-          title: "บันทึกสำเร็จ",
-          description: "ข้อมูลของคุณถูกบันทึกเรียบร้อยแล้ว",
+          title: "Saved successfully",
+          description: "Your information has been successfully saved.",
         });
         
         // Reset form after 3 seconds
@@ -68,14 +68,14 @@ const AgencyForm = () => {
           });
         }, 3000);
       } else {
-        throw new Error(result.message || 'เกิดข้อผิดพลาดในการบันทึกข้อมูล');
+        throw new Error(result.message || 'An error occurred while saving the data.');
       }
     } catch (error) {
       console.error('Error submitting form:', error);
-      const errorMessage = error instanceof Error ? error.message : 'เกิดข้อผิดพลาดในการบันทึกข้อมูล กรุณาลองใหม่อีกครั้ง';
+      const errorMessage = error instanceof Error ? error.message : 'An error occurred while saving the data. Please try again.';
       setError(errorMessage);
       toast({
-        title: "เกิดข้อผิดพลาด",
+        title: "An error occurred.",
         description: errorMessage,
         variant: "destructive",
       });
@@ -92,10 +92,10 @@ const AgencyForm = () => {
             <Building2 className="text-white" size={32} />
           </div>
           <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">
-            กรอกข้อมูลผู้ติดต่อจาก Agency
+          Fill in the contact information from the agency.
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            กรุณากรอกข้อมูลของคุณเพื่อให้เราสามารถติดต่อกลับได้
+          Please enter your potential customer's full name so we can reserve them under your name.
           </p>
         </div>
 
@@ -109,7 +109,7 @@ const AgencyForm = () => {
                 บันทึกข้อมูลสำเร็จ!
               </h3>
               <p className="text-gray-600 mb-6">
-                ข้อมูลของคุณถูกบันทึกเรียบร้อยแล้ว เราจะติดต่อกลับโดยเร็วที่สุด
+              Your information has been successfully saved. We will contact you as soon as possible.
               </p>
             </div>
           ) : (
@@ -123,13 +123,13 @@ const AgencyForm = () => {
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    ชื่อ <span className="text-red-500">*</span>
+                  Name <span className="text-red-500">*</span>
                   </label>
                   <Input 
                     name="firstName"
                     value={formData.firstName}
                     onChange={handleInputChange}
-                    placeholder="กรุณากรอกชื่อ" 
+                    placeholder="Input customer's name" 
                     required
                     disabled={isLoading}
                     className="w-full"
@@ -137,13 +137,13 @@ const AgencyForm = () => {
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    นามสกุล <span className="text-red-500">*</span>
+                  Last Name <span className="text-red-500">*</span>
                   </label>
                   <Input 
                     name="lastName"
                     value={formData.lastName}
                     onChange={handleInputChange}
-                    placeholder="กรุณากรอกนามสกุล" 
+                    placeholder="Input customer's last name" 
                     required
                     disabled={isLoading}
                     className="w-full"
@@ -153,13 +153,13 @@ const AgencyForm = () => {
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  ชื่อ Agency <span className="text-red-500">*</span>
+                Agent Name <span className="text-red-500">*</span>
                 </label>
                 <Input 
                   name="agencyName"
                   value={formData.agencyName}
                   onChange={handleInputChange}
-                  placeholder="กรุณากรอกชื่อ Agency" 
+                  placeholder=" Input your name here" 
                   required
                   disabled={isLoading}
                   className="w-full"
@@ -168,13 +168,13 @@ const AgencyForm = () => {
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  รายละเอียด
+                Additional Details
                 </label>
                 <Textarea 
                   name="details"
                   value={formData.details}
                   onChange={handleInputChange}
-                  placeholder="กรุณากรอกรายละเอียดเพิ่มเติม (ถ้ามี)" 
+                  placeholder="Input additional details of your potential customer's details. (optional)" 
                   rows={6}
                   disabled={isLoading}
                   className="w-full"
@@ -189,10 +189,10 @@ const AgencyForm = () => {
                 {isLoading ? (
                   <>
                     <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-                    กำลังบันทึก...
+                    Recording...
                   </>
                 ) : (
-                  'บันทึกข้อมูล'
+                  'Save Info'
                 )}
               </Button>
             </form>

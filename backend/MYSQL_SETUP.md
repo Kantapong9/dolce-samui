@@ -4,9 +4,8 @@
 
 - [การติดตั้ง MySQL](#การติดตั้ง-mysql)
 - [การสร้าง Database](#การสร้าง-database)
-- [การตั้งค่า Environment Variables](#การตั้งค่า-environment-variables)
-- [การติดตั้ง Dependencies](#การติดตั้ง-dependencies)
-- [การรัน Server](#การรัน-server)
+- [การตั้งค่า Database Configuration](#การตั้งค่า-database-configuration)
+- [การ Initialize Database](#การ-initialize-database)
 - [การตรวจสอบการทำงาน](#การตรวจสอบการทำงาน)
 - [Troubleshooting](#troubleshooting)
 
@@ -14,19 +13,22 @@
 
 ## การติดตั้ง MySQL
 
-### Windows
+### Windows (XAMPP)
 
-1. ดาวน์โหลด MySQL Installer:
-   - https://dev.mysql.com/downloads/installer/
-   - เลือก "MySQL Installer for Windows"
+1. ดาวน์โหลด XAMPP:
+   - https://www.apachefriends.org/
+   - เลือกเวอร์ชันที่เหมาะสมกับ Windows ของคุณ
 
-2. ติดตั้ง MySQL:
+2. ติดตั้ง XAMPP:
    - เปิดไฟล์ installer ที่ดาวน์โหลดมา
-   - เลือก "Developer Default" หรือ "Server only"
-   - ตั้งค่า root password (จำไว้สำหรับใช้ใน .env)
-   - รอให้ติดตั้งเสร็จ
+   - เลือก components: Apache, MySQL, PHP
+   - ติดตั้งตามขั้นตอน
 
-3. ตรวจสอบการติดตั้ง:
+3. เริ่ม MySQL Service:
+   - เปิด XAMPP Control Panel
+   - คลิก "Start" ที่ MySQL
+
+4. ตรวจสอบการติดตั้ง:
    ```bash
    mysql --version
    ```
@@ -72,7 +74,7 @@ sudo mysql_secure_installation
 mysql -u root -p
 
 # สร้าง database
-CREATE DATABASE dolce_villa;
+CREATE DATABASE dolce_villa CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 # (Optional) สร้าง user ใหม่สำหรับแอป
 CREATE USER 'dolce_user'@'localhost' IDENTIFIED BY 'your_password';
@@ -83,87 +85,93 @@ FLUSH PRIVILEGES;
 EXIT;
 ```
 
-### วิธีที่ 2: ใช้ MySQL Workbench
+### วิธีที่ 2: ใช้ MySQL Workbench / phpMyAdmin
 
-1. เปิด MySQL Workbench
+1. เปิด MySQL Workbench หรือ phpMyAdmin
 2. เชื่อมต่อกับ MySQL server
-3. คลิกขวาที่ "Schemas" → "Create Schema"
-4. ตั้งชื่อ database: `dolce_villa`
-5. คลิก "Apply"
+3. สร้าง database ใหม่:
+   - ชื่อ: `dolce_villa`
+   - Character set: `utf8mb4`
+   - Collation: `utf8mb4_unicode_ci`
 
 ---
 
-## การตั้งค่า Environment Variables
+## การตั้งค่า Database Configuration
 
-สร้างไฟล์ `backend/.env` ในโฟลเดอร์ backend:
+แก้ไขไฟล์ `backend/config.php`:
 
-```env
-# Server Port
-PORT=3001
-
-# MySQL Database Configuration
-DB_HOST=localhost
-DB_PORT=3306
-DB_NAME=dolce_villa
-DB_USER=root
-DB_PASSWORD=your_password
+```php
+// Database Configuration
+define('DB_HOST', 'localhost');
+define('DB_PORT', '3306');
+define('DB_NAME', 'dolce_villa');
+define('DB_USER', 'root');
+define('DB_PASSWORD', 'your_password');
 ```
 
 ### ตัวอย่างการตั้งค่าต่างๆ
 
 **ใช้ root user:**
-```env
-DB_HOST=localhost
-DB_PORT=3306
-DB_NAME=dolce_villa
-DB_USER=root
-DB_PASSWORD=your_root_password
+```php
+define('DB_HOST', 'localhost');
+define('DB_PORT', '3306');
+define('DB_NAME', 'dolce_villa');
+define('DB_USER', 'root');
+define('DB_PASSWORD', 'your_root_password');
 ```
 
 **ใช้ user ที่สร้างใหม่:**
-```env
-DB_HOST=localhost
-DB_PORT=3306
-DB_NAME=dolce_villa
-DB_USER=dolce_user
-DB_PASSWORD=your_password
+```php
+define('DB_HOST', 'localhost');
+define('DB_PORT', '3306');
+define('DB_NAME', 'dolce_villa');
+define('DB_USER', 'dolce_user');
+define('DB_PASSWORD', 'your_password');
 ```
 
 **เชื่อมต่อกับ MySQL บน server อื่น:**
-```env
-DB_HOST=192.168.1.100
-DB_PORT=3306
-DB_NAME=dolce_villa
-DB_USER=remote_user
-DB_PASSWORD=remote_password
+```php
+define('DB_HOST', '192.168.1.100');
+define('DB_PORT', '3306');
+define('DB_NAME', 'dolce_villa');
+define('DB_USER', 'remote_user');
+define('DB_PASSWORD', 'remote_password');
 ```
 
 ---
 
-## การติดตั้ง Dependencies
+## การ Initialize Database
 
+### วิธีที่ 1: ใช้ PHP Script (แนะนำ)
+
+**ผ่าน Command Line:**
 ```bash
 cd backend
-npm install
+php init-db.php
 ```
 
-จะติดตั้ง `mysql2` package อัตโนมัติ
+**ผ่าน Browser:**
+```
+http://localhost/dolce-samui/backend/init-db.php
+```
 
----
-
-## การรัน Server
+### วิธีที่ 2: ใช้ SQL Script
 
 ```bash
-cd backend
-npm run dev
+mysql -u root -p dolce_villa < init.sql
 ```
 
-ถ้าตั้งค่าถูกต้อง จะเห็น:
-```
-✅ MySQL database connected
-✅ Database table initialized
-Server is running on http://localhost:3001
-MySQL Database: localhost:3306/dolce_villa
+หรือรัน SQL ต่อไปนี้ใน MySQL:
+
+```sql
+CREATE TABLE IF NOT EXISTS agency_contacts (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(255) NOT NULL,
+    last_name VARCHAR(255) NOT NULL,
+    agency_name VARCHAR(255) NOT NULL,
+    details TEXT,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 ```
 
 ---
@@ -174,7 +182,7 @@ MySQL Database: localhost:3306/dolce_villa
 
 เปิด browser ไปที่:
 ```
-http://localhost:3001/api/health
+http://localhost/dolce-samui/backend/api/health
 ```
 
 ควรเห็น:
@@ -183,7 +191,7 @@ http://localhost:3001/api/health
   "status": "ok",
   "message": "Server is running",
   "database": "MySQL",
-  "serverTime": "2024-01-01T12:00:00.000Z",
+  "serverTime": "2024-01-01 12:00:00",
   "databaseName": "dolce_villa"
 }
 ```
@@ -191,7 +199,7 @@ http://localhost:3001/api/health
 ### 2. ทดสอบการบันทึกข้อมูล
 
 ```bash
-curl -X POST http://localhost:3001/api/agency-contacts \
+curl -X POST http://localhost/dolce-samui/backend/api/agency-contacts \
   -H "Content-Type: application/json" \
   -d '{
     "firstName": "ทดสอบ",
@@ -209,6 +217,12 @@ mysql -u root -p dolce_villa
 SELECT * FROM agency_contacts;
 ```
 
+หรือใช้ phpMyAdmin:
+1. เปิด phpMyAdmin
+2. เลือก database `dolce_villa`
+3. คลิกที่ table `agency_contacts`
+4. ดูข้อมูล
+
 ---
 
 ## Troubleshooting
@@ -218,7 +232,7 @@ SELECT * FROM agency_contacts;
 **ปัญหา**: Username หรือ password ผิด
 
 **แก้ไข**:
-1. ตรวจสอบ username และ password ใน `.env`
+1. ตรวจสอบ username และ password ใน `config.php`
 2. ทดสอบเชื่อมต่อด้วย command line:
    ```bash
    mysql -u root -p
@@ -235,8 +249,8 @@ SELECT * FROM agency_contacts;
 **แก้ไข**:
 1. ตรวจสอบว่า MySQL service กำลังรัน:
    ```bash
-   # Windows
-   services.msc (ค้นหา MySQL)
+   # Windows (XAMPP)
+   เปิด XAMPP Control Panel และตรวจสอบว่า MySQL กำลังรัน
    
    # macOS
    brew services list
@@ -247,6 +261,9 @@ SELECT * FROM agency_contacts;
 
 2. เริ่ม MySQL service:
    ```bash
+   # Windows (XAMPP)
+   คลิก "Start" ที่ MySQL ใน XAMPP Control Panel
+   
    # macOS
    brew services start mysql
    
@@ -254,7 +271,7 @@ SELECT * FROM agency_contacts;
    sudo systemctl start mysql
    ```
 
-3. ตรวจสอบ host และ port ใน `.env`
+3. ตรวจสอบ host และ port ใน `config.php`
 
 ### ❌ Error: "Unknown database 'dolce_villa'"
 
@@ -263,9 +280,11 @@ SELECT * FROM agency_contacts;
 **แก้ไข**:
 ```bash
 mysql -u root -p
-CREATE DATABASE dolce_villa;
+CREATE DATABASE dolce_villa CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 EXIT;
 ```
+
+หรือรัน `init-db.php`
 
 ### ❌ Error: "Table 'agency_contacts' already exists"
 
@@ -279,16 +298,25 @@ EXIT;
 
 **แก้ไข**:
 1. หยุด MySQL service ที่ใช้ port 3306
-2. หรือเปลี่ยน port ใน `.env`:
-   ```env
-   DB_PORT=3307
+2. หรือเปลี่ยน port ใน `config.php`:
+   ```php
+   define('DB_PORT', '3307');
    ```
+
+### ❌ Error: "Connection refused" หรือ "Connection timeout"
+
+**ปัญหา**: Firewall หรือ network configuration
+
+**แก้ไข**:
+1. ตรวจสอบ firewall settings
+2. ตรวจสอบว่า MySQL อนุญาตให้เชื่อมต่อจาก localhost
+3. ตรวจสอบ network configuration
 
 ---
 
 ## Database Schema
 
-ตาราง `agency_contacts` จะถูกสร้างอัตโนมัติเมื่อรัน server ครั้งแรก:
+ตาราง `agency_contacts` จะถูกสร้างอัตโนมัติเมื่อรัน `init-db.php`:
 
 | Column | Type | Description |
 |--------|------|-------------|
@@ -303,8 +331,51 @@ EXIT;
 
 ## หมายเหตุ
 
-- Database และ table จะถูกสร้างอัตโนมัติเมื่อรัน server ครั้งแรก
+- Database และ table จะถูกสร้างอัตโนมัติเมื่อรัน `init-db.php`
 - ควร backup database เป็นประจำ
 - สำหรับ production ควรสร้าง user แยกสำหรับแอป (ไม่ใช้ root)
 - ควรตั้งค่า password ที่แข็งแรง
+- ใช้ UTF-8 (utf8mb4) เพื่อรองรับภาษาไทยและ emoji
+- สำหรับ production ควรปิด error reporting ใน `config.php`
 
+---
+
+## การ Backup และ Restore
+
+### Backup Database
+
+```bash
+mysqldump -u root -p dolce_villa > backup.sql
+```
+
+### Restore Database
+
+```bash
+mysql -u root -p dolce_villa < backup.sql
+```
+
+---
+
+## Security Best Practices
+
+1. **ไม่ใช้ root user ใน production**
+   - สร้าง user แยกสำหรับแอป
+   - ให้สิทธิ์เฉพาะที่จำเป็น
+
+2. **ใช้ Prepared Statements**
+   - ป้องกัน SQL Injection
+   - ใช้ mysqli prepared statements
+
+3. **ตั้งค่า Password ที่แข็งแรง**
+   - ใช้ password ที่มีความยาวอย่างน้อย 12 ตัวอักษร
+   - รวมตัวอักษร ตัวเลข และสัญลักษณ์
+
+4. **ปิด Error Reporting ใน Production**
+   ```php
+   error_reporting(0);
+   ini_set('display_errors', 0);
+   ```
+
+5. **ใช้ HTTPS**
+   - เข้ารหัสข้อมูลระหว่าง client และ server
+   - ป้องกันการดักจับข้อมูล

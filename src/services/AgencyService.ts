@@ -1,6 +1,8 @@
 import { AgencyContact, AgencyContactResponse } from '@/types/agency';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3001/api';
+//const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost/dolce-samui/backend/api';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://dolcevillasamui.com/backend/api';
+
 
 export class AgencyService {
   /**

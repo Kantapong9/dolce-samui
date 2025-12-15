@@ -1,0 +1,31 @@
+# Enable Rewrite Engine
+RewriteEngine On
+
+# Set base directory (adjust if needed based on your server setup)
+# For local XAMPP: /dolce-samui/backend/
+# For production: /backend/ or leave empty
+# Comment out or adjust RewriteBase based on your server configuration
+# RewriteBase /backend/
+
+# Direct access to specific endpoints (must come before general routing)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^api/agency-contacts/?(.*)$ api/agency-contacts.php [QSA,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^api/health/?$ api/health.php [QSA,L]
+
+# Route all other API requests to api/index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^api/(.*)$ api/index.php [QSA,L]
+
+# Security: Prevent directory listing
+Options -Indexes
+
+# Security: Prevent access to config files
+<FilesMatch "^(config\.php|\.env)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
