@@ -2,14 +2,33 @@ import MapSection from '@/components/location/MapSection';
 import LocationDetails from '@/components/location/LocationDetails';
 import { MapPin, Clock, Car, Plane } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import samuiMap from '@/assets/samui-map.png';
 
 const Location = () => {
   const { t } = useLanguage();
   
   return (
     <>
-      {/* Location Information Section */}
+      {/* Our Location Section with Map Image */}
       <section id="location" className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">
+              Our Location
+            </h2>
+          </div>
+          <div className="flex justify-center">
+            <img 
+              src={samuiMap} 
+              alt="Koh Samui Location Map" 
+              className="max-w-full h-auto shadow-lg rounded-lg"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Location Information Section */}
+      <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">
