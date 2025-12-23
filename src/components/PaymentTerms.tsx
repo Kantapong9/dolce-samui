@@ -10,7 +10,7 @@ const PaymentTerms = () => {
     { stage: t('payment.third'), milestone: t('payment.milestone.roof'), amount: '20%' },
     { stage: t('payment.fourth'), milestone: t('payment.milestone.electrical'), amount: '10%' },
     { stage: t('payment.fifth'), milestone: t('payment.milestone.ceiling'), amount: '10%' },
-    { stage: t('payment.sixth'), milestone: t('payment.milestone.doors'), amount: '10%' },
+    
   ];
 
   return (
