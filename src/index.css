@@ -18,10 +18,11 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
+    /* Main brand color - rgb(180,170,120) ≈ hsl(50, 29%, 59%) */
+    --primary: 50 29% 59%;
     --primary-foreground: 210 40% 98%;
     
-    --navbar: 38 42% 63%;
+    --navbar: 50 29% 59%;
     --navbar-foreground: 0 0% 100%;
 
     --secondary: 210 40% 96.1%;
@@ -69,10 +70,11 @@ All colors MUST be HSL.
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
+    /* Keep same main brand color in dark mode for consistency */
+    --primary: 50 29% 59%;
     --primary-foreground: 222.2 47.4% 11.2%;
     
-    --navbar: 38 42% 63%;
+    --navbar: 50 29% 59%;
     --navbar-foreground: 0 0% 100%;
 
     --secondary: 217.2 32.6% 17.5%;

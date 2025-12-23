@@ -1,10 +1,16 @@
-import { Waves, Car, TreePine, Wifi } from 'lucide-react';
+import { Waves, Car, Wifi } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import gateIcon from '@/assets/gate-2.png';
 
 const Amenities = () => {
   const { t } = useLanguage();
   
-  const features = [
+  const features: Array<{
+    icon: any;
+    isImage?: boolean;
+    title: string;
+    description: string;
+  }> = [
     {
       icon: Waves,
       title: t('amenities.pool.title'),
@@ -16,7 +22,8 @@ const Amenities = () => {
       description: t('amenities.parking.desc')
     },
     {
-      icon: TreePine,
+      icon: gateIcon,
+      isImage: true,
       title: t('amenities.garden.title'),
       description: t('amenities.garden.desc')
     },
@@ -46,7 +53,11 @@ const Amenities = () => {
               className="text-center p-6 rounded-lg hover:shadow-lg transition-shadow duration-300 group"
             >
               <div className="w-16 h-16 bg-navbar rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-navbar/80 transition-colors duration-300">
-                <feature.icon className="text-white transition-colors duration-300" size={32} />
+                {feature.isImage ? (
+                  <img src={feature.icon as string} alt={feature.title} className="w-8 h-8 object-contain" />
+                ) : (
+                  <feature.icon className="text-white transition-colors duration-300" size={32} />
+                )}
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
               <p className="text-gray-600">{feature.description}</p>

@@ -2,7 +2,7 @@ import MapSection from '@/components/location/MapSection';
 import LocationDetails from '@/components/location/LocationDetails';
 import { MapPin, Clock, Car, Plane } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import samuiMap from '@/assets/samui-map.png';
+import samuiMap from '@/assets/Samui-Roads.png';
 
 const Location = () => {
   const { t } = useLanguage();

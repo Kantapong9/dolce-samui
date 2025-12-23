@@ -64,8 +64,8 @@ const translations = {
     'projectPlan.subtitle': 'Explore the comprehensive development plan showcasing all villa units and their strategic positioning',
     
     // House Layout
-    'layout.title': 'Villa Details',
-    'layout.subtitle': '(295 Sq.m. & 306 Sq.m. usable area) Main living areas including spacious living room, spacious kitchen and dining area with direct pool access.',
+    'layout.title': 'Villa Layout',
+    'layout.subtitle': 'Main living areas including spacious living room, spacious kitchen and dining area with direct pool access.',
     'layout.areas': 'Room Areas',
     'layout.total': 'Total Area',
     'layout.living': 'Living Room',
@@ -101,7 +101,7 @@ const translations = {
     // Payment Terms
     'payment.title': 'Payment Terms',
     'payment.subtitle': 'Flexible payment schedule designed to make your dream villa purchase smooth and convenient',
-    'payment.stage': 'Payment Stage',
+    'payment.stage': 'Payment Terms',
     'payment.milestone.label': 'Milestone',
     'payment.amount': 'Amount',
     'payment.reservation': 'Reservation & Deposit',
