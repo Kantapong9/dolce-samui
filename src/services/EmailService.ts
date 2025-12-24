@@ -24,7 +24,7 @@ export class EmailService {
         from_email: formData.email,
         phone: formData.phone || 'Not provided',
         message: formData.message || 'No additional message provided',
-        to_email: 'info@dolcevillasamui.com'
+        to_email: 'kantapong@dolcevillasamui.com'
       };
 
       // Send email using EmailJS
@@ -69,7 +69,7 @@ Best regards,
 ${formData.firstName} ${formData.lastName}
         `);
         
-        const mailtoLink = `mailto:info@dolcevillasamui.com?subject=${subject}&body=${body}`;
+        const mailtoLink = `mailto:kantapong@dolcevillasamui.com?subject=${subject}&body=${body}`;
         window.location.href = mailtoLink;
         
         return { 
@@ -92,7 +92,7 @@ ${formData.firstName} ${formData.lastName}
         },
         body: JSON.stringify({
           ...formData,
-          to: 'info@dolcevillasamui.com',
+          to: 'kantapong@dolcevillasamui.com',
           subject: 'Private Viewing Request - Dolce Villa Samui'
         }),
       });

@@ -138,7 +138,7 @@ const Contact = () => {
                   <Mail className="text-green-600" size={24} />
                 </div>
                 <h4 className="text-lg font-medium text-gray-900 mb-2">Email Sent Successfully!</h4>
-                <p className="text-gray-600">Your viewing request has been sent to info@dolcevillasamui.com</p>
+                <p className="text-gray-600">Your viewing request has been sent to kantapong@dolcevillasamui.com</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">

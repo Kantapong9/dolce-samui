@@ -43,7 +43,7 @@ const LocationDetails = () => {
           </div>
           <div className="flex items-center gap-3">
             <Mail size={16} className="text-blue-600" />
-            <span>info@dolcevillasamui.com</span>
+            <span>kantapong@dolcevillasamui.com</span>
           </div>
         </CardContent>
       </Card>

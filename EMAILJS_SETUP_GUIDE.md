@@ -105,7 +105,7 @@ export const EMAILJS_CONFIG = {
 
 3. **ตรวจสอบผลลัพธ์**:
    - ควรเห็น "Email sent successfully!"
-   - ตรวจสอบอีเมลที่ info@dolcevillasamui.com
+   - ตรวจสอบอีเมลที่ kantapong@dolcevillasamui.com
 
 ### 🔧 การแก้ไขปัญหา:
 
@@ -147,6 +147,6 @@ VITE_EMAILJS_PUBLIC_KEY=your_public_key
 
 ### 📞 Contact Information:
 
-- **Email**: info@dolcevillasamui.com
+- **Email**: kantapong@dolcevillasamui.com
 - **Phone**: +66 85 564 9899
 - **Address**: Soi Pratamnak, Bophut, Koh Samui, Thailand

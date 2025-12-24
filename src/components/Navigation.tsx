@@ -1,14 +1,13 @@
 
 import { useState } from 'react';
-import { Menu, X, Globe } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Button } from '@/components/ui/button';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
-  const { language, setLanguage, t } = useLanguage();
+  const { t } = useLanguage();
 
   const navItems = [
     { name: t('nav.home'), href: '/' },
@@ -17,10 +16,6 @@ const Navigation = () => {
     { name: t('nav.location'), href: '#location' },
     { name: t('nav.contact'), href: '#contact' },
   ];
-
-  const toggleLanguage = () => {
-    setLanguage(language === 'en' ? 'ru' : 'en');
-  };
 
   const handleNavClick = (href: string) => {
     if (href.startsWith('#') && location.pathname !== '/') {
@@ -60,30 +55,10 @@ const Navigation = () => {
                 </Link>
               )
             ))}
-            
-            {/* Language Toggle Button */}
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={toggleLanguage}
-              className="flex items-center space-x-1"
-            >
-              <Globe size={16} />
-              <span>{language === 'en' ? 'RU' : 'EN'}</span>
-            </Button>
           </div>
 
-          {/* Mobile menu button and language toggle */}
-          <div className="md:hidden flex items-center space-x-2">
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={toggleLanguage}
-              className="flex items-center space-x-1"
-            >
-              <Globe size={14} />
-              <span className="text-xs">{language === 'en' ? 'RU' : 'EN'}</span>
-            </Button>
+          {/* Mobile menu button */}
+          <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-navbar-foreground/80 hover:text-navbar-foreground"
