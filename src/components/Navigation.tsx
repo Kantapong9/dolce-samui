@@ -3,11 +3,13 @@ import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   const { t } = useLanguage();
+  const isMobile = useIsMobile();
 
   const navItems = [
     { name: t('nav.home'), href: '/' },
@@ -34,43 +36,47 @@ const Navigation = () => {
           </Link>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              item.href.startsWith('#') ? (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  onClick={() => handleNavClick(item.href)}
-                  className="text-navbar-foreground/80 hover:text-navbar-foreground transition-colors duration-200"
-                >
-                  {item.name}
-                </a>
-              ) : (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className="text-navbar-foreground/80 hover:text-navbar-foreground transition-colors duration-200"
-                >
-                  {item.name}
-                </Link>
-              )
-            ))}
-          </div>
+          {!isMobile && (
+            <div className="flex items-center space-x-8">
+              {navItems.map((item) => (
+                item.href.startsWith('#') ? (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    onClick={() => handleNavClick(item.href)}
+                    className="text-navbar-foreground/80 hover:text-navbar-foreground transition-colors duration-200"
+                  >
+                    {item.name}
+                  </a>
+                ) : (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className="text-navbar-foreground/80 hover:text-navbar-foreground transition-colors duration-200"
+                  >
+                    {item.name}
+                  </Link>
+                )
+              ))}
+            </div>
+          )}
 
           {/* Mobile menu button */}
-          <div className="md:hidden flex items-center">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-navbar-foreground/80 hover:text-navbar-foreground"
-            >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
+          {isMobile && (
+            <div className="flex items-center">
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="text-navbar-foreground/80 hover:text-navbar-foreground"
+              >
+                {isOpen ? <X size={24} /> : <Menu size={24} />}
+              </button>
+            </div>
+          )}
         </div>
 
         {/* Mobile Navigation */}
-        {isOpen && (
-          <div className="md:hidden bg-navbar border-t border-navbar-foreground/20">
+        {isMobile && isOpen && (
+          <div className="bg-navbar border-t border-navbar-foreground/20">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navItems.map((item) => (
                 item.href.startsWith('#') ? (

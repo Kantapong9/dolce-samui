@@ -8,8 +8,8 @@ const PaymentTerms = () => {
     { stage: t('payment.first'), milestone: t('payment.milestone.sign'), amount: '30%' },
     { stage: t('payment.second'), milestone: t('payment.milestone.ground'), amount: '20%' },
     { stage: t('payment.third'), milestone: t('payment.milestone.roof'), amount: '20%' },
-    { stage: t('payment.fourth'), milestone: t('payment.milestone.electrical'), amount: '15%' },
-    { stage: t('payment.fifth'), milestone: t('payment.milestone.ceiling'), amount: '15%' },
+    { stage: t('payment.fourth'), milestone: t('payment.milestone.electrical'), amount: '20%' },
+    { stage: t('payment.fifth'), milestone: t('payment.milestone.ceiling'), amount: '10%' },
     
   ];
 
