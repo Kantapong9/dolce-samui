@@ -39,9 +39,7 @@ const PaymentTerms = () => {
                 {paymentSchedule.map((payment, index) => (
                   <tr 
                     key={index}
-                    className={`border-b border-gray-200 hover:bg-gray-50 transition-colors ${
-                      index === 0 ? 'bg-blue-50' : ''
-                    }`}
+                    className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white"
                   >
                     <td className="px-6 py-4 font-medium text-gray-900">{payment.stage}</td>
                     <td className="px-6 py-4 text-gray-600">{payment.milestone}</td>

@@ -27,37 +27,37 @@ const HouseLayout = () => {
       title: 'Villa Detail',
       area: '(295 - 306 Sq.m. usable area)',
       description: 'Complete view of the pool villa floor plan that surrounded by ample of green spaces.',
-      features: ['3 bedrooms plus or 4 bedrooms', '3 or bathrooms + 1 guest toilet', 'Salt water pool (8m x 3m)', 'Salt water pool (8m x 3m)', 'Laundry room', '2 parking']
+      features: ['3 bedrooms plus or 4 bedrooms', '3 or bathrooms + 1 guest toilet', 'Salt water pool (8m x 3m)', 'Laundry room', '2 parking']
     },
     {
       title: 'Villa Detail',
       area: '(295 - 306 Sq.m. usable area)',
       description: 'Complete view of the pool villa floor plan that surrounded by ample of green spaces.',
-      features: ['3 bedrooms plus or 4 bedrooms', '3 or bathrooms + 1 guest toilet', 'Salt water pool (8m x 3m)', 'Salt water pool (8m x 3m)', 'Laundry room', '2 parking']
+      features: ['3 bedrooms plus or 4 bedrooms', '3 or bathrooms + 1 guest toilet', 'Salt water pool (8m x 3m)', 'Laundry room', '2 parking']
     },
     {
       title: 'Villa Detail',
       area: '(295 - 306 Sq.m. usable area)',
       description: 'Complete view of the pool villa floor plan that surrounded by ample of green spaces.',
-      features: ['3 bedrooms plus or 4 bedrooms', '3 or bathrooms + 1 guest toilet', 'Salt water pool (8m x 3m)', 'Salt water pool (8m x 3m)', 'Laundry room', '2 parking']
+      features: ['3 bedrooms plus or 4 bedrooms', '3 or bathrooms + 1 guest toilet', 'Salt water pool (8m x 3m)', 'Laundry room', '2 parking']
     },
     {
       title: 'Villa Detail',
       area: '(295 - 306 Sq.m. usable area)',
       description: 'Complete view of the pool villa floor plan that surrounded by ample of green spaces.',
-      features: ['3 bedrooms plus or 4 bedrooms', '3 or bathrooms + 1 guest toilet', 'Salt water pool (8m x 3m)', 'Salt water pool (8m x 3m)', 'Laundry room', '2 parking']
+      features: ['3 bedrooms plus or 4 bedrooms', '3 or bathrooms + 1 guest toilet', 'Salt water pool (8m x 3m)', 'Laundry room', '2 parking']
     },
     {
       title: 'Villa Detail',
       area: '(295 - 306 Sq.m. usable area)',
       description: 'Complete view of the pool villa floor plan that surrounded by ample of green spaces.',
-      features: ['3 bedrooms plus or 4 bedrooms', '3 or bathrooms + 1 guest toilet', 'Salt water pool (8m x 3m)', 'Salt water pool (8m x 3m)', 'Laundry room', '2 parking']
+      features: ['3 bedrooms plus or 4 bedrooms', '3 or bathrooms + 1 guest toilet', 'Salt water pool (8m x 3m)', 'Laundry room', '2 parking']
      },
     {
       title: 'Villa Detail',
       area: '(295 - 306 Sq.m. usable area)',
       description: 'Complete view of the pool villa floor plan that surrounded by ample of green spaces.',
-      features: ['3 bedrooms plus or 4 bedrooms', '3 or bathrooms + 1 guest toilet', 'Salt water pool (8m x 3m)', 'Salt water pool (8m x 3m)', 'Laundry room', '2 parking']
+      features: ['3 bedrooms plus or 4 bedrooms', '3 or bathrooms + 1 guest toilet', 'Salt water pool (8m x 3m)', 'Laundry room', '2 parking']
      }
   ];
 
@@ -127,7 +127,7 @@ const HouseLayout = () => {
                   {houseInfo[current].features.map((feature, index) => (
                     <li key={index} className="flex items-start">
                       <span className="text-primary mr-2">•</span>
-                      <span className="text-foreground text-sm">{feature}</span>
+                      <span className="text-muted-foreground text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>

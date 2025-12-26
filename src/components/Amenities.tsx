@@ -1,6 +1,6 @@
 import { Waves, Car, Wifi } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import gateIcon from '@/assets/gate-2.png';
+import gateIcon from '@/assets/Icon-Gate.svg';
 
 const Amenities = () => {
   const { t } = useLanguage();
