@@ -104,7 +104,7 @@ const translations = {
     'payment.stage': 'Payment Terms',
     'payment.milestone.label': 'Milestone',
     'payment.amount': 'Amount',
-    'payment.reservation': 'Reservation & Deposit',
+    'payment.reservation': 'Reservation Fee',
     'payment.first': 'Payment 1',
     'payment.second': 'Payment 2',
     'payment.third': 'Payment 3',

@@ -78,7 +78,7 @@ const Location = () => {
             </div>
           </div>
 
-          <div className="bg-gray-50 rounded-lg p-8">
+          <div className="bg-gray-50 rounded-lg p-0 md:p-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
               {t('location.attractions.title')}
             </h3>
