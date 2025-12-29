@@ -111,7 +111,7 @@ const Location = () => {
                 <ul className="text-gray-600 space-y-1">
                   <li>• Marina & Yacht Club : 5 minutes</li>
                   <li>• International Schools : 8-15 minutes</li>
-                  <li>• Golf Courses :10-20 minutes</li>
+                  <li>• Golf Courses : 10-20 minutes</li>
                   <li>• Bangkok Hospital Samui : 12 minutes</li>
                 </ul>
               </div>

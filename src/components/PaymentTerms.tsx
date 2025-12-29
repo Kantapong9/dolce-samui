@@ -17,10 +17,10 @@ const PaymentTerms = () => {
     <section className="py-20 px-4 bg-gradient-to-b from-white to-gray-50">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-light text-gray-900 mb-4">
             {t('payment.title')}
           </h2>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-600 text-sm md:text-base lg:text-lg max-w-2xl mx-auto">
             {t('payment.subtitle')}
           </p>
         </div>
@@ -30,9 +30,9 @@ const PaymentTerms = () => {
             <table className="w-full">
               <thead className="bg-navbar text-navbar-foreground">
                 <tr>
-                  <th className="px-6 py-4 text-left font-semibold">{t('payment.stage')}</th>
-                  <th className="px-6 py-4 text-left font-semibold">{t('payment.milestone.label')}</th>
-                  <th className="px-6 py-4 text-right font-semibold">{t('payment.amount')}</th>
+                  <th className="px-2 py-2 md:px-4 md:py-3 lg:px-6 lg:py-4 text-left text-xs md:text-sm lg:text-base font-semibold">{t('payment.stage')}</th>
+                  <th className="px-2 py-2 md:px-4 md:py-3 lg:px-6 lg:py-4 text-left text-xs md:text-sm lg:text-base font-semibold">{t('payment.milestone.label')}</th>
+                  <th className="px-2 py-2 md:px-4 md:py-3 lg:px-6 lg:py-4 text-right text-xs md:text-sm lg:text-base font-semibold">{t('payment.amount')}</th>
                 </tr>
               </thead>
               <tbody>
@@ -41,9 +41,9 @@ const PaymentTerms = () => {
                     key={index}
                     className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white"
                   >
-                    <td className="px-6 py-4 font-medium text-gray-900">{payment.stage}</td>
-                    <td className="px-6 py-4 text-gray-600">{payment.milestone}</td>
-                    <td className="px-6 py-4 text-right font-semibold text-primary">{payment.amount}</td>
+                    <td className="px-2 py-2 md:px-4 md:py-3 lg:px-6 lg:py-4 text-xs md:text-sm lg:text-base font-medium text-gray-900">{payment.stage}</td>
+                    <td className="px-2 py-2 md:px-4 md:py-3 lg:px-6 lg:py-4 text-xs md:text-sm lg:text-base text-gray-600">{payment.milestone}</td>
+                    <td className="px-2 py-2 md:px-4 md:py-3 lg:px-6 lg:py-4 text-right text-xs md:text-sm lg:text-base font-semibold text-primary">{payment.amount}</td>
                   </tr>
                 ))}
               </tbody>
@@ -51,7 +51,7 @@ const PaymentTerms = () => {
           </div>
         </div>
 
-        <div className="mt-8 text-center text-sm text-gray-600">
+        <div className="mt-8 text-center text-xs md:text-sm text-gray-600">
           <p>{t('payment.note')}</p>
         </div>
       </div>
